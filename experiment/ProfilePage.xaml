@@ -7,5 +7,6 @@
             VerticalOptions="CenterAndExpand" 
             HorizontalOptions="CenterAndExpand" />
         <Button Text="На главную" Clicked="MainPage"/>
+        <Button Text="Получилось" Clicked="MainPage"/>
     </StackLayout>
 </ContentPage>
