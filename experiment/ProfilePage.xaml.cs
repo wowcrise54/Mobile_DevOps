@@ -12,6 +12,7 @@ namespace experiment
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage
     {
+        
         public ProfilePage()
         {
             InitializeComponent();
