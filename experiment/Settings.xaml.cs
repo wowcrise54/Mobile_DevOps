@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace experiment
 {
-    public partial class MainPage : ContentPage
-    {
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class Settings : ContentPage
+	{
+		public Settings ()
+		{
+			InitializeComponent ();
+		}
 
-        private async void ProfileButton(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ProfilePage());
-        }
         private async void OnMainTapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MainPage());
@@ -43,5 +41,6 @@ namespace experiment
         {
             await Navigation.PushAsync(new Settings());
         }
+
     }
 }

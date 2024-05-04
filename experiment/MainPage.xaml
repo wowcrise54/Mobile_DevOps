@@ -159,16 +159,36 @@
 
 
         <Frame HeightRequest="30" WidthRequest="320" BackgroundColor="Black"
-               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0.5, Constant=0}" 
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=0.5, Constant=0}"
                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-60}"
                HasShadow="True">
 
             <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" Margin="-5,-5" HorizontalOptions="CenterAndExpand" Spacing="15">
-                <Image Source="main.png" />
-                <Image Source="like.png" />
-                <Image Source="celebrate.png" />
-                <Image Source="mypecipes.png" />
-                <Image Source="settings.png" />
+                <Image Source="main.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnMainTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="like.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnLikeTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="celebrate.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCelebrateTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="mypecipes.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnMyRecipesTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Source="settings.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSettingsTapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
 
         </Frame>
