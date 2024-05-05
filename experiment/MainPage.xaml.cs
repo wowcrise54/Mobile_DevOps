@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +18,6 @@ namespace experiment
         {
             await Navigation.PushAsync(new ProfilePage());
         }
-        private async void OnMainTapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MainPage());
         }
 
         private async void OnLikeTapped(object sender, EventArgs e)
