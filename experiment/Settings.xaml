@@ -8,4 +8,9 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
     </StackLayout>
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Настройки" Priority="1" Order="Default"/>
+
+    </ContentPage.ToolbarItems>
 </ContentPage>
