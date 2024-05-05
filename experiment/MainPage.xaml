@@ -9,13 +9,13 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.IsSwipePagingEnabled="False"
-            android:TabbedPage.IsSmoothScrollEnabled="False">
+            android:TabbedPage.IsSmoothScrollEnabled="False"
+            >
 
 
     <local:Home Title="Главная" IconImageSource="main.png"/>
     <local:like Title="Избранное" IconImageSource="favourite.png"/>
     <local:holidays Title="Праздники" IconImageSource="holidays.png"/>
-    <local:myrecipes Title="Мои рецепты" IconImageSource="myrecipes.png"/>
     <local:settings Title="Настройки" IconImageSource="settings.png"/>
 
 </TabbedPage>   

@@ -2,7 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.like">
-    
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default"/>
+        <ToolbarItem Text="Избранное" Order="Primary" Priority="1"/>
+        <ToolbarItem Text="Поиск" IconImageSource="lupa.png" Priority="2" Order="Default"  />
+
+    </ContentPage.ToolbarItems>
+
     <StackLayout>
         <Label Text="Добро пожаловать в избранное!"
                 FontSize="50"

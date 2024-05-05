@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.Home"
-             Title="Главная">
+             x:Class="experiment.Home">
 
     <ContentPage.ToolbarItems>
 
-        <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Primary" Clicked="OnProfileClicked" />
+        <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default"/>
+        <ToolbarItem Text="Главная" Order="Primary" Priority="1"/>
+        <ToolbarItem Text="Поиск" IconImageSource="lupa.png" Priority="2" Order="Default"  />
 
-        <ToolbarItem Text="Поиск" IconImageSource="lupa.png" Priority="0" Order="Primary" Clicked="OnSearchClicked" />
-        
     </ContentPage.ToolbarItems>
 
     <StackLayout>
