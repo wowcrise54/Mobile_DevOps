@@ -8,6 +8,9 @@
             <StackLayout BackgroundColor="#181818" >
                 <StackLayout Orientation="Horizontal" Padding="30,0,30,0">
                     <Image Source="profile.png" HorizontalOptions="StartAndExpand" WidthRequest="24" HeightRequest="28">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ProfileButton"/>
+                        </Image.GestureRecognizers>
                     </Image>
                     <Label Text="Главная" FontFamily="inglobalbold" HorizontalOptions="CenterAndExpand" Padding="0,50,0,0" FontSize="20" FontAttributes="Bold" TextColor="white" />
                     <Image Source="lupa.png" HorizontalOptions="EndAndExpand" WidthRequest="21" HeightRequest="21" />
