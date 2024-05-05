@@ -2,11 +2,53 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.like">
-    
+
     <StackLayout>
-        <Label Text="Добро пожаловать в избранное!"
-                FontSize="50"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout BackgroundColor="#181818" >
+                <StackLayout Orientation="Horizontal" Padding="30,0,30,0">
+                    <Image Source="profile.png" HorizontalOptions="StartAndExpand" WidthRequest="24" HeightRequest="28">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ProfileButton"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Избранное" FontFamily="inglobalbold" HorizontalOptions="CenterAndExpand" Padding="0,50,0,0" FontSize="20" FontAttributes="Bold" TextColor="white" />
+                    <Image Source="lupa.png" HorizontalOptions="EndAndExpand" WidthRequest="21" HeightRequest="21" />
+                </StackLayout>
+
+                
+                <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
+                    <Frame BackgroundColor="Transparent" Padding="0">
+                        <StackLayout>
+                            <Image Source="farsh.png"/>
+                            <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="350"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
+                        <StackLayout>
+                            <Image Source="grudka.png" />
+                            <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="240"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
+                        <StackLayout>
+                            <Image Source="chicken.png"/>
+                            <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="240"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,100">
+                        <StackLayout>
+                            <Image Source="salat.png"/>
+                            <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="240"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+               
+            </StackLayout>
+        </ScrollView>
+
     </StackLayout>
 </ContentPage>

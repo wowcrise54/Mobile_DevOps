@@ -2,10 +2,122 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.holidays">
-    
+
     <StackLayout>
-        <Label Text="Добро пожаловать в праздники!" FontSize="35"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout BackgroundColor="#181818" >
+                <StackLayout Orientation="Horizontal" Padding="30,0,30,0">
+                    <Image Source="profile.png" HorizontalOptions="StartAndExpand" WidthRequest="24" HeightRequest="28">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ProfileButton"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Праздники" FontFamily="inglobalbold" HorizontalOptions="CenterAndExpand" Padding="0,50,0,0" FontSize="20" FontAttributes="Bold" TextColor="white" />
+                    <Image Source="lupa.png" HorizontalOptions="EndAndExpand" WidthRequest="21" HeightRequest="21" />
+                </StackLayout>
+
+
+                <Label Text="Пасха" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,40,0,10"/>
+                <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
+                    <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
+                        <Frame BackgroundColor="Transparent" Padding="0">
+                            <StackLayout>
+                                <Image Source="corzina.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Корзинка цветная" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="kulich.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Куличик с ягодами" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="pasha.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Пасха 'Сладость'" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="more.png" WidthRequest="144" HeightRequest="150"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <Label Text="Новый год" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,30,0,10"/>
+                <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
+                    <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
+                        <Frame BackgroundColor="Transparent" Padding="0">
+                            <StackLayout>
+                                <Image Source="goose.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Новогодний гусь" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="olive.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Оливье 'Высотка'" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="pasha.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Сельдь под шубой" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="more.png" WidthRequest="144" HeightRequest="150"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+                <Label Text="Масленница" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,30,0,10"/>
+                <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
+                    <StackLayout Orientation="Horizontal" Padding="15,0,10,100">
+                        <Frame BackgroundColor="Transparent" Padding="0">
+                            <StackLayout>
+                                <Image Source="tort.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Блинный торт" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="kurnik.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Курник 'Грибник'" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="tartaletki.png" WidthRequest="144" HeightRequest="150"/>
+                                <Label Text="Тарталетки" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
+                            <StackLayout>
+                                <Image Source="more.png" WidthRequest="144" HeightRequest="150"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+
+
+            </StackLayout>
+        </ScrollView>
+
+
     </StackLayout>
 </ContentPage>

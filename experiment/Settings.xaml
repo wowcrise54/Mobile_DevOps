@@ -2,10 +2,57 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.settings">
-    
+
     <StackLayout>
-        <Label Text="Добро пожаловать в настройки!" FontSize="35"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout BackgroundColor="#181818" >
+                <StackLayout Orientation="Horizontal" Padding="30,0,30,0">
+                    <Image Source="profile.png" HorizontalOptions="StartAndExpand" WidthRequest="24" HeightRequest="28">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ProfileButton"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label Text="Настройки" FontFamily="inglobalbold" HorizontalOptions="CenterAndExpand" Padding="0,50,0,0" FontSize="20" FontAttributes="Bold" TextColor="white" />
+                    <Image Source="lupa.png" HorizontalOptions="EndAndExpand" WidthRequest="21" HeightRequest="21" />
+                </StackLayout>
+
+                <Label Text="Тема" FontSize="20" FontFamily="inglobalbold" TextColor="White" Margin="10,40,0,10"/>
+                <StackLayout Padding="15,0,15,0" BackgroundColor="Transparent">
+                    <Frame BackgroundColor="#646464" Padding="0" CornerRadius="35">
+                        <StackLayout Margin="38,30,30,30">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Светлая" FontFamily="inglobal" FontSize="16" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                                <Switch OnColor="#A93240" ThumbColor="White" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" Padding="0,20">
+                                <Label Text="Темная" FontFamily="inglobal" FontSize="16" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                                <Switch OnColor="#A93240" ThumbColor="White" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Системная" FontFamily="inglobal" FontSize="16" TextColor="White" HorizontalOptions="StartAndExpand"/>
+                                <Switch OnColor="#A93240" ThumbColor="White" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <Label Text="Язык интерфейса" FontSize="20" FontFamily="inglobalbold" TextColor="White" Margin="10,40,0,10"/>
+                <StackLayout Padding="15,0,15,0" Margin="0,0,0,207" BackgroundColor="Transparent">
+                    <Frame BackgroundColor="#646464" Padding="0" CornerRadius="35">
+                        <StackLayout Margin="20">
+                            <Picker x:Name="languagePicker">
+                                <Picker.Items>
+                                    <x:String>Русский</x:String>
+                                    <x:String>English</x:String>
+                                    <x:String>Deutsch</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
 </ContentPage>
