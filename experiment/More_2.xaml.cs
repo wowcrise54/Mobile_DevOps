@@ -10,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace experiment
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainPage : TabbedPage
+	public partial class More_2 : ContentPage
 	{
-		public MainPage ()
+		public More_2 ()
 		{
 			InitializeComponent ();
-         
-            
-        }
+		}
 	}
 }

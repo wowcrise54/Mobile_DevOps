@@ -9,14 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace experiment
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainPage : TabbedPage
-	{
-		public MainPage ()
-		{
-			InitializeComponent ();
-         
-            
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Hearts : ContentPage
+    {
+        public Hearts()
+        {
+            InitializeComponent();
         }
-	}
+    }
 }

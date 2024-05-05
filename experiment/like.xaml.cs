@@ -15,6 +15,13 @@ namespace experiment
         public like()
         {
             InitializeComponent();
+            
+        }
+    
+        private void OnSearchClicked(object sender, EventArgs e)
+        {
+
+            DisplayAlert("Alert", "Edit button clicked!", "OK");
         }
 
         private async void ProfileButton(object sender, EventArgs e)
