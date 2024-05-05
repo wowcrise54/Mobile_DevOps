@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace experiment
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class myrecipes : ContentPage
+    public partial class like : ContentPage
     {
-        public myrecipes()
+        public like()
         {
             InitializeComponent();
         }

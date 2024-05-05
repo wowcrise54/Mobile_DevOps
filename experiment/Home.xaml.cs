@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace experiment
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProfilePage : ContentPage
+    public partial class Home : ContentPage
     {
-        public ProfilePage()
+        public Home()
         {
             InitializeComponent();
-        }
-
-        private async void MainPage(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MainPage());
         }
     }
 }
