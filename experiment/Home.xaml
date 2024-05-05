@@ -3,18 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.Home">
     
+   
+    
     <StackLayout>
+        
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout BackgroundColor="#181818" >
-                <StackLayout Orientation="Horizontal" Padding="30,0,30,0">
-                    <Image Source="profile.png" HorizontalOptions="StartAndExpand" WidthRequest="24" HeightRequest="28">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="ProfileButton"/>
-                        </Image.GestureRecognizers>
-                    </Image>
-                    <Label Text="Главная" FontFamily="inglobalbold" HorizontalOptions="CenterAndExpand" Padding="0,50,0,0" FontSize="20" FontAttributes="Bold" TextColor="white" />
-                    <Image Source="lupa.png" HorizontalOptions="EndAndExpand" WidthRequest="21" HeightRequest="21" />
-                </StackLayout>
+             
 
                 <Label Text="Актуальное" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,40,0,0"/>
                 <Grid  Margin="0,10,0,0">
@@ -121,9 +116,11 @@
                             </Frame>
 
                             <Frame BackgroundColor="Transparent" Padding="5,0,0,0">
-                                <StackLayout>
-                                    <Image Source="more.png" WidthRequest="110" HeightRequest="120"/>
-                                </StackLayout>
+                                <Image Source="more.png" WidthRequest="110" HeightRequest="120">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnImageTapped_1"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Frame>
                         </StackLayout>
                     </ScrollView>
@@ -148,9 +145,11 @@
                             </Frame>
 
                             <Frame BackgroundColor="Transparent" Padding="5,0,0,0">
-                                <StackLayout>
-                                    <Image Source="more.png" WidthRequest="110" HeightRequest="120"/>
-                                </StackLayout>
+                                <Image Source="more.png" WidthRequest="110" HeightRequest="120">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnImageTapped_2"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Frame>
                         </StackLayout>
                     </ScrollView>

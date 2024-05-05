@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.More">
+             x:Class="experiment.More_3">
     
-    
-    <Label Text="Больше 1" FontSize="50" FontFamily="inglobal" TextColor="Black" Margin="10,20,0,0"/>
+    <Label Text="Больше 3" FontSize="50" FontFamily="inglobal" TextColor="Black" Margin="10,20,0,0"/>
 </ContentPage>

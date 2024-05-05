@@ -17,16 +17,23 @@ namespace experiment
             InitializeComponent();
         }
 
-        private async void ProfileButton(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ProfilePage());
-        }
+        
 
         private async void OnImageTapped(object sender, EventArgs e)
         {
             
             await Navigation.PushAsync(new More());
         }
+        private async void OnImageTapped_1(object sender, EventArgs e)
+        {
 
+            await Navigation.PushAsync(new More_2());
+        }
+        private async void OnImageTapped_2(object sender, EventArgs e)
+        {
+
+            await Navigation.PushAsync(new More_3());
+        }
+     
     }
 }
