@@ -71,7 +71,11 @@
 
                             <Frame BackgroundColor="Transparent" Padding="5,0,0,0">
                                 <StackLayout>
-                                    <Image Source="more.png" WidthRequest="110" HeightRequest="120"/>
+                                    <Image Source="more.png" WidthRequest="110" HeightRequest="120">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnImageTapped"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>

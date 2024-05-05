@@ -21,5 +21,12 @@ namespace experiment
         {
             await Navigation.PushAsync(new ProfilePage());
         }
+
+        private async void OnImageTapped(object sender, EventArgs e)
+        {
+            
+            await Navigation.PushAsync(new More());
+        }
+
     }
 }
