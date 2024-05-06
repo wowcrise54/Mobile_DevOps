@@ -6,7 +6,7 @@
 	<item>
 		<color android:color="@color/colorSplash"/>
 	</item>
-	<item android:drawable="@drawable/seld"
+	<item android:drawable="@drawable/splash_logo"
 			android:gravity="center">	
 	</item>
 </layer-list>
