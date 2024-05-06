@@ -188,6 +188,7 @@
   <ItemGroup>
     <Content Include="Resources\drawable\avatar.png" />
     <Content Include="Resources\drawable\edit.png" />
+    <Content Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
