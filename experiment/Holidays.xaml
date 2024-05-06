@@ -5,11 +5,7 @@
 
 
     <ContentPage.ToolbarItems>
-
         <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default" Clicked="ProfileButton"/>
-        <ToolbarItem Text="Праздники" Order="Primary" Priority="1"/>
-        <ToolbarItem Text="Поиск" IconImageSource="lupa.png" Priority="2" Order="Default" Clicked="OnSearchClicked" />
-
     </ContentPage.ToolbarItems>
 
     <StackLayout>

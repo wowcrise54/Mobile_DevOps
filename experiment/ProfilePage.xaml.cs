@@ -21,5 +21,9 @@ namespace experiment
         {
             await Navigation.PushAsync(new like());
         }
+        private async void OnMyRecipes(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new myrecipes());
+        }
     }
 }

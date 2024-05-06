@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.myrecipes">
+             x:Class="experiment.myrecipes"
+             Title="Мои рецепты">
 
-    <ContentPage.ToolbarItems>
+    <StackLayout>
+        <Label Text="Кулич с ягодами" FontSize="50" FontFamily="inglobal" TextColor="Black" Margin="10,20,0,0"/>
+    </StackLayout>
 
-        <ToolbarItem Text="Мои рецепты" Priority="1" Order="Default"/>
-
-    </ContentPage.ToolbarItems>
 </ContentPage>

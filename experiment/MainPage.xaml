@@ -12,9 +12,29 @@
             android:TabbedPage.IsSmoothScrollEnabled="False">
 
 
-    <local:Home Title="Главная" IconImageSource="main.png"/>
-    <local:like Title="Избранное" IconImageSource="favourite.png"/>
-    <local:holidays Title="Праздники" IconImageSource="holidays.png"/>
-    <local:settings Title="Настройки" IconImageSource="settings.png"/>
+    <NavigationPage Title="Главная" IconImageSource="main.png">
+        <x:Arguments>
+            <local:Home x:Name="Home" Title="Главная" />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Избранное" IconImageSource="favourite.png">
+        <x:Arguments>
+            <local:like x:Name="like" Title="Избранное"/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Праздники" IconImageSource="holidays.png">
+        <x:Arguments>
+            <local:holidays x:Name="holidays" Title="Праздники"/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Настройки" IconImageSource="settings.png">
+        <x:Arguments>
+            <local:settings x:Name="settings" Title="Настройки"/>
+        </x:Arguments>
+    </NavigationPage>
+
 
 </TabbedPage>

@@ -6,7 +6,7 @@
 
     <ContentPage.ToolbarItems>
 
-        <ToolbarItem Text="Изменить" IconImageSource="lupa" Order="Primary" Priority="1"/>
+        <ToolbarItem Text="Изменить" IconImageSource="edit.png" Order="Primary" Priority="1"/>
 
     </ContentPage.ToolbarItems>
 
@@ -58,7 +58,7 @@
 
                 <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnFeedBack"/>
+                        <TapGestureRecognizer Tapped="OnMyRecipes"/>
                     </StackLayout.GestureRecognizers>
                     <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>

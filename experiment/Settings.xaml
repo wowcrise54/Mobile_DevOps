@@ -7,9 +7,7 @@
     <ContentPage.ToolbarItems>
 
         <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default" Clicked="ProfileButton"/>
-        <ToolbarItem Text="Настройки" Order="Primary" Priority="1"/>
-        <ToolbarItem Text="Поиск" IconImageSource="lupa.png" Priority="2" Order="Default" Clicked="OnSearchClicked" />
-
+ 
     </ContentPage.ToolbarItems>
 
 
@@ -40,7 +38,7 @@
                 </StackLayout>
 
                 <Label Text="Язык интерфейса" FontSize="20" FontFamily="inglobalbold" TextColor="White" Margin="10,40,0,10"/>
-                <StackLayout Padding="15,0,15,0" Margin="0,0,0,234" BackgroundColor="Transparent">
+                <StackLayout Padding="15,0,15,0" Margin="0,0,0,246" BackgroundColor="Transparent">
                     <Frame BackgroundColor="#646464" Padding="0" CornerRadius="35">
                         <StackLayout Margin="30,15">
                             <Picker x:Name="languagePicker" FontFamily="inglobal" FontSize="16">
