@@ -1,12 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.ProfilePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Добро пожаловать в мой профиль!" FontSize="35"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="experiment.ProfilePage"
+             Title="Мой профиль">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Изменить" IconImageSource="lupa" Order="Primary" Priority="1"/>
+
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout BackgroundColor="#181818">
+                
+                <StackLayout>
+                    <Frame>
+                        <StackLayout>
+                            <Image Source="avatar.png"/>
+                            <Label Text="Галкин Алексей Владимирович"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
 </ContentPage>

@@ -17,50 +17,48 @@
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout BackgroundColor="#181818" >
                 
-
-
                 <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
                     <Frame BackgroundColor="Transparent" Padding="0">
                         <StackLayout>
-                            <Image Source="farsh.png" WidthRequest="240" HeightRequest="120">
+                            <Image Source="farsh.png">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnKabachok"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="350"/>
+                            <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="16" TextColor="White" />
                         </StackLayout>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
                         <StackLayout>
-                            <Image Source="grudka.png" WidthRequest="240" HeightRequest="120">
+                            <Image Source="grudka.png">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnGrudka"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="240"/>
+                            <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="16" TextColor="White"/>
                         </StackLayout>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
                         <StackLayout>
-                            <Image Source="chicken.png" WidthRequest="110" HeightRequest="120">
+                            <Image Source="chicken.png">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnChicken"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="240"/>
+                            <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="16" TextColor="White"/>
                         </StackLayout>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,100">
                         <StackLayout>
-                            <Image Source="salat.png" WidthRequest="110" HeightRequest="120">
+                            <Image Source="salat.png">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnSalat"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="14" TextColor="White" WidthRequest="240"/>
+                            <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" TextColor="White"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
