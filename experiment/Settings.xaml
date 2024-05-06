@@ -3,18 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.settings">
 
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default" Clicked="ProfileButton"/>
+        <ToolbarItem Text="Настройки" Order="Primary" Priority="1"/>
+        <ToolbarItem Text="Поиск" IconImageSource="lupa.png" Priority="2" Order="Default" Clicked="OnSearchClicked" />
+
+    </ContentPage.ToolbarItems>
+
+
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout BackgroundColor="#181818" >
-                <StackLayout Orientation="Horizontal" Padding="30,0,30,0">
-                    <Image Source="profile.png" HorizontalOptions="StartAndExpand" WidthRequest="24" HeightRequest="28">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="ProfileButton"/>
-                        </Image.GestureRecognizers>
-                    </Image>
-                    <Label Text="Настройки" FontFamily="inglobalbold" HorizontalOptions="CenterAndExpand" Padding="0,50,0,0" FontSize="20" FontAttributes="Bold" TextColor="white" />
-                    <Image Source="lupa.png" HorizontalOptions="EndAndExpand" WidthRequest="21" HeightRequest="21" />
-                </StackLayout>
 
                 <Label Text="Тема" FontSize="20" FontFamily="inglobalbold" TextColor="White" Margin="10,40,0,10"/>
                 <StackLayout Padding="15,0,15,0" BackgroundColor="Transparent">

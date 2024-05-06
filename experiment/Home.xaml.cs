@@ -34,7 +34,7 @@ namespace experiment
 
             await Navigation.PushAsync(new More_3());
         }
-        private async void OnProfileClicked(object sender, EventArgs e)
+        private async void ProfileButton(object sender, EventArgs e)
         {
 
             await Navigation.PushAsync(new ProfilePage());

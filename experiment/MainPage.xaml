@@ -9,8 +9,7 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.IsSwipePagingEnabled="False"
-            android:TabbedPage.IsSmoothScrollEnabled="False"           
-            NavigationPage.HasNavigationBar="False">
+            android:TabbedPage.IsSmoothScrollEnabled="False">
 
 
     <local:Home Title="Главная" IconImageSource="main.png"/>

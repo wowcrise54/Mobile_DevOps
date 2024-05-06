@@ -28,5 +28,21 @@ namespace experiment
         {
             await Navigation.PushAsync(new ProfilePage());
         }
+        private async void OnKabachok(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Kabachok());
+        }
+        private async void OnGrudka(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Grudka());
+        }
+        private async void OnChicken(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Chicken());
+        }
+        private async void OnSalat(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Salat());
+        }
     }
 }

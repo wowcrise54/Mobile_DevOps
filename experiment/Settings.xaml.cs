@@ -21,5 +21,10 @@ namespace experiment
         {
             await Navigation.PushAsync(new ProfilePage());
         }
+        private void OnSearchClicked(object sender, EventArgs e)
+        {
+
+            DisplayAlert("Alert", "Edit button clicked!", "OK");
+        }
     }
 }
