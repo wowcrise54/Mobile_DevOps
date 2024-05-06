@@ -12,13 +12,10 @@
 
     </ContentPage.ToolbarItems>
 
-
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout BackgroundColor="#181818" >
                
-
-
                 <Label Text="Пасха" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,40,0,10"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
@@ -116,8 +113,8 @@
                 </ScrollView>
 
                 <Label Text="Масленница" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,30,0,10"/>
-                <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
-                    <StackLayout Orientation="Horizontal" Padding="15,0,10,100">
+                <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Margin="0,0,0,100">
+                    <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">
                             <StackLayout>
                                 <Image Source="tort.png" WidthRequest="144" HeightRequest="150">
@@ -162,8 +159,6 @@
                         </Frame>
                     </StackLayout>
                 </ScrollView>
-
-
 
             </StackLayout>
         </ScrollView>

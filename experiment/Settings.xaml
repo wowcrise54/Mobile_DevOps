@@ -40,7 +40,7 @@
                 </StackLayout>
 
                 <Label Text="Язык интерфейса" FontSize="20" FontFamily="inglobalbold" TextColor="White" Margin="10,40,0,10"/>
-                <StackLayout Padding="15,0,15,0" Margin="0,0,0,207" BackgroundColor="Transparent">
+                <StackLayout Padding="15,0,15,0" Margin="0,0,0,230" BackgroundColor="Transparent">
                     <Frame BackgroundColor="#646464" Padding="0" CornerRadius="35">
                         <StackLayout Margin="20">
                             <Picker x:Name="languagePicker">
