@@ -13,15 +13,109 @@
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout BackgroundColor="#181818">
-                
+
                 <StackLayout>
-                    <Frame>
+                    <Frame BackgroundColor="Transparent" Padding="0">
                         <StackLayout>
                             <Image Source="avatar.png"/>
-                            <Label Text="Галкин Алексей Владимирович"/>
+                            <Label Text="Галкин Алексей Владимирович" TextColor="White" FontSize="20" FontFamily="inglobalbold" 
+                               HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="25,40,25,0" Padding="0,10,0,10">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        
+                        <Label Text="Номер телефона" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="+7 999 888 77 66" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+
+                <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFeedBack"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="Мои отзывы" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Image Source="all.png" WidthRequest="10"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFeedBack"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="Мои рецепты" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Image Source="all.png" WidthRequest="10"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFeedBack"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="Пользовательское соглашение" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Image Source="all.png" WidthRequest="10"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="25,10,25,70" Padding="0,10,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFeedBack"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="Политика конфиденциальности" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Image Source="all.png" WidthRequest="10"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="35,16" Margin="0,0,0,40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnFeedBack"/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Выйти с аккаунта" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal"/>
+                </Frame>
+
             </StackLayout>
         </ScrollView>
     </StackLayout>
