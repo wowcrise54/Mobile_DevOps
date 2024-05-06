@@ -16,10 +16,10 @@ namespace experiment
         {
             InitializeComponent();
         }
+
         private async void OnFeedBack(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new like());
         }
-
     }
 }

@@ -26,7 +26,7 @@
 
                 <StackLayout Orientation="Horizontal" Margin="25,40,25,0" Padding="0,10,0,10">
                     <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-
+                        
                         <Label Text="Номер телефона" FontSize="16" TextColor="White" FontFamily="inglobal"/>
 
                     </Frame>
@@ -120,4 +120,3 @@
         </ScrollView>
     </StackLayout>
 </ContentPage>
-
