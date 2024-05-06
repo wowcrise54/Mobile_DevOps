@@ -113,7 +113,7 @@
                     </Frame.GestureRecognizers>
                     <Label Text="Выйти с аккаунта" 
                            HorizontalTextAlignment="Center" 
-                           VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal"/>
+                           VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>
                 </Frame>
 
             </StackLayout>

@@ -30,7 +30,7 @@ namespace experiment.Droid
 
         async Task SimulateStartup()
         {
-            await Task.Delay(TimeSpan.FromSeconds(2));
+            await Task.Delay(TimeSpan.FromSeconds(1));
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
             Finish();
         }
