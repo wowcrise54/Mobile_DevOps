@@ -4,6 +4,6 @@
              x:Class="experiment.Kurnik">
 
 
-    <Label Text="Курник" FontSize="50" FontFamily="inglobal" TextColor="Black" Margin="10,20,0,0"/>
+    <Label Text="Курник" FontSize="50" FontFamily="inglobal" TextColor="White" Margin="10,20,0,0"/>
 
 </ContentPage>

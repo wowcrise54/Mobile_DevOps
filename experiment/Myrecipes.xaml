@@ -5,7 +5,7 @@
              Title="Мои рецепты">
 
     <StackLayout>
-        <Label Text="Кулич с ягодами" FontSize="50" FontFamily="inglobal" TextColor="Black" Margin="10,20,0,0"/>
+        <Label Text="Кулич с ягодами" FontSize="50" FontFamily="inglobal" TextColor="White" Margin="10,20,0,0"/>
     </StackLayout>
 
 </ContentPage>

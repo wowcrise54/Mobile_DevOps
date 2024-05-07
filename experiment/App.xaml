@@ -4,10 +4,39 @@
              x:Class="experiment.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="TextColor">#181818</Color>
+            <Color x:Key="TextColor1">#A93240</Color>
+            <Color x:Key="WindowBackgroundColor">#181818</Color>
+            <Color x:Key="TextColorLight">White</Color>
+            <Color x:Key="TextColorDark">black</Color>
+            <Color x:Key="BackgroundColorLight">white</Color>
+            <Color x:Key="BackgroundColorDark">black</Color>
+            
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="Black"/>
-                <Setter Property="BarTextColor" Value="White"/>
+                <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Dark=Black, Light=#D499A0}"/>
+                <Setter Property="BarTextColor" Value="{AppThemeBinding Dark=White, Light=black}"/>
             </Style>
+            
+            <Style x:Key="GlobalLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Dark=White, Light=black}"/>
+            </Style>
+
+            <Style x:Key="Global" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextColorLight}"/>
+            </Style>
+
+
+            <Style TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}"/>
+            </Style>
+
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark=#646464, Light=#ABABAB}"/>
+                <Setter Property="CornerRadius" Value="15"/>
+                <Setter Property="HasShadow" Value="True"/>
+                <Setter Property="Padding" Value="15,9,15,10"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

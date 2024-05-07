@@ -74,35 +74,45 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnFeedBack"/>
-                    </StackLayout.GestureRecognizers>
                     <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Label Text="Пользовательское соглашение" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+                            <Label Text="Пользовательское соглашение" FontSize="16" TextColor="White" FontFamily="inglobal">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnUsers"/>
+                                </Label.GestureRecognizers>
+                            </Label>
                         </StackLayout>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Image Source="all.png" WidthRequest="10"/>
+                            <Image Source="all.png" WidthRequest="10">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnUsers"/>
+                                </Image.GestureRecognizers>
+                            </Image>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="25,10,25,70" Padding="0,10,0,10">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnFeedBack"/>
-                    </StackLayout.GestureRecognizers>
                     <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Label Text="Политика конфиденциальности" FontSize="16" TextColor="White" FontFamily="inglobal"/>
+                            <Label Text="Политика конфицидиальности" FontSize="16" TextColor="White" FontFamily="inglobal">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPolitica"/>
+                                </Label.GestureRecognizers>
+                            </Label>
                         </StackLayout>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Image Source="all.png" WidthRequest="10"/>
+                            <Image Source="all.png" WidthRequest="10">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPolitica"/>
+                                </Image.GestureRecognizers>
+                            </Image>
                         </StackLayout>
                     </Frame>
                 </StackLayout>

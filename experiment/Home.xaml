@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.Home">
+             x:Class="experiment.Home"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default" Clicked="ProfileButton"/>
@@ -10,71 +11,71 @@
     <StackLayout>
 
         <ScrollView VerticalScrollBarVisibility="Never">
-            <StackLayout BackgroundColor="#181818" >
+            <StackLayout>
 
 
-                <Label Text="Актуальное" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,40,0,0"/>
+                <Label Text="Актуальное" FontSize="20" FontFamily="inglobal" Style="{DynamicResource GlobalLabelStyle}" Margin="10,40,0,0"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
                     <StackLayout Orientation="Horizontal" Padding="10,0,10,0" Margin="0,10,0,0">
-                        <Frame BackgroundColor="#646464" CornerRadius="15" HasShadow="True" Padding="15,9,15,10">
+                        <Frame Style="{DynamicResource FrameStyle}">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Frame_Tapped"/>
                             </Frame.GestureRecognizers>
                             <StackLayout>
-                                <Label Text="Хумус" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Хумус" FontFamily="inglobal" FontSize="14" Style="{StaticResource Global}"/>
                             </StackLayout>
                         </Frame>
 
 
 
-                        <Frame BackgroundColor="#646464" CornerRadius="15" HasShadow="True" Padding="15,9,15,10" Margin="5,0,0,0">
+                        <Frame Style="{DynamicResource FrameStyle}">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Frame_Tapped_1"/>
                             </Frame.GestureRecognizers>
                             <StackLayout>
-                                <Label Text="Постные супы" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Постные супы" FontFamily="inglobal" FontSize="14" Style="{StaticResource Global}"/>
                             </StackLayout>
                         </Frame>
 
 
 
 
-                        <Frame BackgroundColor="#646464" CornerRadius="15" HasShadow="True" Padding="15,9,15,10" Margin="5,0,0,0">
+                        <Frame Style="{DynamicResource FrameStyle}">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Frame_Tapped_2"/>
                             </Frame.GestureRecognizers>
                             <StackLayout>
-                                <Label Text="Постные котлеты" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Постные котлеты" FontFamily="inglobal" FontSize="14" Style="{StaticResource Global}"/>
                             </StackLayout>
                         </Frame>
 
 
 
 
-                        <Frame BackgroundColor="#646464" CornerRadius="15" HasShadow="True" Padding="15,9,15,10" Margin="5,0,0,0">
+                        <Frame Style="{DynamicResource FrameStyle}">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Frame_Tapped_3"/>
                             </Frame.GestureRecognizers>
                             <StackLayout>
-                                <Label Text="Постные пироги" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Постные пироги" FontFamily="inglobal" FontSize="14" Style="{StaticResource Global}"/>
                             </StackLayout>
                         </Frame>
 
 
 
-                        <Frame BackgroundColor="#646464" CornerRadius="15" HasShadow="True" Padding="15,9,15,10" Margin="5,0,0,0">
+                        <Frame Style="{DynamicResource FrameStyle}">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Frame_Tapped_4"/>
                             </Frame.GestureRecognizers>
                             <StackLayout>
-                                <Label Text="Правильное питание" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Правильное питание" FontFamily="inglobal" FontSize="14" Style="{StaticResource Global}"/>
                             </StackLayout>
                         </Frame>
 
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="Новые рецепты" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,20,0,10"/>
+                <Label Text="Новые рецепты" FontSize="20" FontFamily="inglobal" Style="{StaticResource GlobalLabelStyle}" Margin="10,20,0,10"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
                     <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0" >
@@ -84,7 +85,7 @@
                                         <TapGestureRecognizer Tapped="OnRecipe"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Ароматные куличи на Пасху" FontFamily="inglobalbold" FontSize="14" TextColor="White" WidthRequest="240"/>
+                                <Label Text="Ароматные куличи на Пасху" FontFamily="inglobalbold" FontSize="14" Style="{StaticResource GlobalLabelStyle}" WidthRequest="240"/>
                             </StackLayout>
                         </Frame>
 
@@ -95,7 +96,7 @@
                                         <TapGestureRecognizer Tapped="OnIzume"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Сладкий рис с сушенной хурмой и черносливом" FontFamily="inglobalbold" FontSize="14" TextColor="White" WidthRequest="240"/>
+                                <Label Text="Сладкий рис с сушенной хурмой и черносливом" FontFamily="inglobalbold" FontSize="14" Style="{StaticResource GlobalLabelStyle}" WidthRequest="240"/>
                             </StackLayout>
                         </Frame>
 
@@ -111,7 +112,7 @@
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="От редакции" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,10,0,10"/>
+                <Label Text="От редакции" FontSize="20" FontFamily="inglobal" Style="{StaticResource GlobalLabelStyle}" Margin="10,10,0,10"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
                     <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0" >
@@ -125,8 +126,8 @@
                                     <Label>
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="Как правильно варить куриные сердечки " FontSize="14" FontFamily="inglobalbold" TextColor="White" FontAttributes="Bold"/>
-                                                <Span Text="/ Лучшие способы приготовить полезный продукт" FontSize="14" FontFamily="inglobal" TextColor="White" FontAttributes="Italic"/>
+                                                <Span Text="Как правильно варить куриные сердечки " FontSize="14" FontFamily="inglobalbold" Style="{StaticResource GlobalLabelStyle}" FontAttributes="Bold"/>
+                                                <Span Text="/ Лучшие способы приготовить полезный продукт" FontSize="14" FontFamily="inglobal" Style="{StaticResource GlobalLabelStyle}" FontAttributes="Italic"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
@@ -145,8 +146,8 @@
                                     <Label>
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="Нездоровая еда в подростковом возрасте ухудшает память " FontSize="14" FontFamily="inglobalbold" TextColor="White" FontAttributes="Bold"/>
-                                                <Span Text="/ И вредит мозгу в долгосрочной" FontSize="14" FontFamily="inglobal" TextColor="White" FontAttributes="Italic"/>
+                                                <Span Text="Нездоровая еда в подростковом возрасте ухудшает память " FontSize="14" FontFamily="inglobalbold" Style="{StaticResource GlobalLabelStyle}" FontAttributes="Bold"/>
+                                                <Span Text="/ И вредит мозгу в долгосрочной" FontSize="14" FontFamily="inglobal" Style="{StaticResource GlobalLabelStyle}" FontAttributes="Italic"/>
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
@@ -167,7 +168,7 @@
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="Подборки" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,20,0,10"/>
+                <Label Text="Подборки" FontSize="20" FontFamily="inglobal" Style="{StaticResource GlobalLabelStyle}" Margin="10,20,0,10"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Margin="0,0,0,100">
                     <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0" >
@@ -177,7 +178,7 @@
                                         <TapGestureRecognizer Tapped="OnFood"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Все о еде" FontSize="14" FontFamily="inglobalbold" TextColor="White" FontAttributes="Bold"/>
+                                <Label Text="Все о еде" FontSize="14" FontFamily="inglobalbold" Style="{StaticResource GlobalLabelStyle}" FontAttributes="Bold"/>
                             </StackLayout>
                         </Frame>
 
@@ -188,7 +189,7 @@
                                         <TapGestureRecognizer Tapped="OnZozh"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="ЗОЖ" FontSize="14" FontFamily="inglobalbold" TextColor="White" WidthRequest="240" FontAttributes="Bold"/>
+                                <Label Text="ЗОЖ" FontSize="14" FontFamily="inglobalbold" Style="{StaticResource GlobalLabelStyle}" WidthRequest="240" FontAttributes="Bold"/>
                             </StackLayout>
                         </Frame>
 

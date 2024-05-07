@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.like">
+             x:Class="experiment.like"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default" Clicked="ProfileButton"/>
@@ -11,7 +12,7 @@
 
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
-            <StackLayout BackgroundColor="#181818" >
+            <StackLayout>
                 
                 <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
                     <Frame BackgroundColor="Transparent" Padding="0">
@@ -21,7 +22,7 @@
                                     <TapGestureRecognizer Tapped="OnKabachok"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="16" TextColor="White" />
+                            <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}" />
                         </StackLayout>
                     </Frame>
 
@@ -32,7 +33,7 @@
                                     <TapGestureRecognizer Tapped="OnGrudka"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="16" TextColor="White"/>
+                            <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
                         </StackLayout>
                     </Frame>
 
@@ -43,7 +44,7 @@
                                     <TapGestureRecognizer Tapped="OnChicken"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="16" TextColor="White"/>
+                            <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
                         </StackLayout>
                     </Frame>
 
@@ -54,7 +55,7 @@
                                     <TapGestureRecognizer Tapped="OnSalat"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" TextColor="White"/>
+                            <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>

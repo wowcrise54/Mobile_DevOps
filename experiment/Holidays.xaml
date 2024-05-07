@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.holidays">
+             x:Class="experiment.holidays"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
 
     <ContentPage.ToolbarItems>
@@ -10,9 +11,9 @@
 
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
-            <StackLayout BackgroundColor="#181818" >
-               
-                <Label Text="Пасха" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,40,0,10"/>
+            <StackLayout>
+
+                <Label Text="Пасха" FontSize="20" FontFamily="inglobal" Style="{DynamicResource GlobalLabelStyle}" Margin="10,40,0,10"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">
@@ -22,7 +23,7 @@
                                         <TapGestureRecognizer Tapped="OnCorzinaColors"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Корзинка цветная" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                                <Label Text="Корзинка цветная" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
@@ -33,7 +34,7 @@
                                         <TapGestureRecognizer Tapped="OnKulich"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Куличик с ягодами" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Куличик с ягодами" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
@@ -44,7 +45,7 @@
                                         <TapGestureRecognizer Tapped="OnPusha"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Пасха 'Сладость'" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                                <Label Text="Пасха 'Сладость'" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
@@ -60,7 +61,7 @@
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="Новый год" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,30,0,10"/>
+                <Label Text="Новый год" FontSize="20" FontFamily="inglobal" Style="{DynamicResource GlobalLabelStyle}" Margin="10,30,0,10"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">
@@ -70,7 +71,7 @@
                                         <TapGestureRecognizer Tapped="OnGoose"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Новогодний гусь" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                                <Label Text="Новогодний гусь" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
@@ -81,7 +82,7 @@
                                         <TapGestureRecognizer Tapped="OnOlive"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Оливье 'Высотка'" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Оливье 'Высотка'" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
@@ -92,7 +93,7 @@
                                         <TapGestureRecognizer Tapped="OnSeld"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Сельдь под шубой" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                                <Label Text="Сельдь под шубой" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
@@ -108,7 +109,7 @@
                     </StackLayout>
                 </ScrollView>
 
-                <Label Text="Масленница" FontSize="20" FontFamily="inglobal" TextColor="White" Margin="10,30,0,10"/>
+                <Label Text="Масленница" FontSize="20" FontFamily="inglobal" Style="{DynamicResource GlobalLabelStyle}" Margin="10,30,0,10"/>
                 <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Margin="0,0,0,100">
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">
@@ -118,7 +119,7 @@
                                         <TapGestureRecognizer Tapped="OnTort"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Блинный торт" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                                <Label Text="Блинный торт" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
@@ -129,7 +130,7 @@
                                         <TapGestureRecognizer Tapped="OnKurnik"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Курник 'Грибник'" FontFamily="inglobal" FontSize="14" TextColor="White"/>
+                                <Label Text="Курник 'Грибник'" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
@@ -140,7 +141,7 @@
                                         <TapGestureRecognizer Tapped="OnTartaletki"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Text="Тарталетки" FontFamily="inglobal" FontSize="14" TextColor="White" />
+                                <Label Text="Тарталетки" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 

@@ -3,8 +3,8 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="experiment.MainPage"
             xmlns:local="clr-namespace:experiment"
-            BarBackgroundColor="Black"
-            SelectedTabColor="#A93240"
+            BarBackgroundColor="{AppThemeBinding Dark=Black, Light=#D499A0}"
+            SelectedTabColor="{AppThemeBinding Dark=#A93240, Light=black}"
             UnselectedTabColor="White"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
@@ -12,25 +12,25 @@
             android:TabbedPage.IsSmoothScrollEnabled="False">
 
 
-    <NavigationPage Title="Главная" IconImageSource="main.png">
+    <NavigationPage Title="Главная" BarTextColor="{AppThemeBinding Dark=White, Light=White}" IconImageSource="main.png">
         <x:Arguments>
             <local:Home x:Name="Home" Title="Главная" />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Избранное" IconImageSource="favourite.png">
+    <NavigationPage Title="Избранное" BarTextColor="{AppThemeBinding Dark=White, Light=White}"  IconImageSource="favourite.png">
         <x:Arguments>
-            <local:like x:Name="like" Title="Избранное"/>
+            <local:like x:Name="like" Title="Избранное" />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Праздники" IconImageSource="holidays.png">
+    <NavigationPage Title="Праздники" BarTextColor="{AppThemeBinding Dark=White, Light=White}" IconImageSource="holidays.png">
         <x:Arguments>
             <local:holidays x:Name="holidays" Title="Праздники"/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Настройки" IconImageSource="settings.png">
+    <NavigationPage Title="Настройки" BarTextColor="{AppThemeBinding Dark=White, Light=White}"  IconImageSource="settings.png">
         <x:Arguments>
             <local:settings x:Name="settings" Title="Настройки"/>
         </x:Arguments>

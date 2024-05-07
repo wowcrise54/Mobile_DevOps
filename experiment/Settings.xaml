@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.settings">
+             x:Class="experiment.settings"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
 
     <ContentPage.ToolbarItems>
@@ -11,47 +12,30 @@
     </ContentPage.ToolbarItems>
 
 
-    <StackLayout>
-        <ScrollView VerticalScrollBarVisibility="Never">
-            <StackLayout BackgroundColor="#181818" >
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+   
+        <RadioButton 
+                      x:Name="RadioButtonSystem"
+                     GroupName="themeGroup"
+                     Content="System Theme"
+                     Style="{DynamicResource GlobalLabelStyle}"
+                     CheckedChanged="RadioButton_CheckedChanged"
+                     Value="System" />
 
-                <Label Text="Тема" FontSize="20" FontFamily="inglobalbold" TextColor="White" Margin="10,40,0,10"/>
-                <StackLayout Padding="15,0,15,0" BackgroundColor="Transparent">
-                    <Frame BackgroundColor="#646464" Padding="0" CornerRadius="35">
-                        <StackLayout Margin="38,30,30,30">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Светлая" FontFamily="inglobal" FontSize="16" TextColor="White" HorizontalOptions="StartAndExpand"/>
-                                <Switch OnColor="#A93240" ThumbColor="White" HorizontalOptions="EndAndExpand"/>
-                            </StackLayout>
+        <RadioButton 
+                     x:Name="RadioButtonLight"
+                     GroupName="themeGroup"
+                     Content="Light Theme"
+                     Style="{DynamicResource GlobalLabelStyle}"
+                     CheckedChanged="RadioButton_CheckedChanged"
+                     Value="Light" />
 
-                            <StackLayout Orientation="Horizontal" Padding="0,20">
-                                <Label Text="Темная" FontFamily="inglobal" FontSize="16" TextColor="White" HorizontalOptions="StartAndExpand"/>
-                                <Switch OnColor="#A93240" ThumbColor="White" HorizontalOptions="EndAndExpand"/>
-                            </StackLayout>
-
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Системная" FontFamily="inglobal" FontSize="16" TextColor="White" HorizontalOptions="StartAndExpand"/>
-                                <Switch OnColor="#A93240" ThumbColor="White" HorizontalOptions="EndAndExpand"/>
-                            </StackLayout>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <Label Text="Язык интерфейса" FontSize="20" FontFamily="inglobalbold" TextColor="White" Margin="10,40,0,10"/>
-                <StackLayout Padding="15,0,15,0" Margin="0,0,0,246" BackgroundColor="Transparent">
-                    <Frame BackgroundColor="#646464" Padding="0" CornerRadius="35">
-                        <StackLayout Margin="30,15">
-                            <Picker x:Name="languagePicker" FontFamily="inglobal" FontSize="16">
-                                <Picker.Items>
-                                    <x:String>Русский</x:String>
-                                    <x:String>English</x:String>
-                                    <x:String>Deutsch</x:String>
-                                </Picker.Items>
-                            </Picker>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </StackLayout>
-        </ScrollView>
+        <RadioButton 
+                      x:Name="RadioButtonDark"
+                     GroupName="themeGroup"
+                     Content="Dark Theme"
+                     Style="{DynamicResource GlobalLabelStyle}"
+                     CheckedChanged="RadioButton_CheckedChanged"
+                     Value="Dark" />
     </StackLayout>
 </ContentPage>

@@ -4,5 +4,5 @@
              x:Class="experiment.Fastfood">
     
     
-    <Label Text="Двойной воппер" FontSize="50" FontFamily="inglobal" TextColor="Black" Margin="10,20,0,0"/>
+    <Label Text="Двойной воппер" FontSize="50" FontFamily="inglobal" TextColor="White" Margin="10,20,0,0"/>
 </ContentPage>
