@@ -191,15 +191,19 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\drawable\avatar.png" />
-    <Content Include="Resources\drawable\dark.png" />
-    <Content Include="Resources\drawable\dark2.png" />
-    <Content Include="Resources\drawable\edit.png" />
-    <Content Include="Resources\drawable\edit2.png" />
-    <Content Include="Resources\drawable\logo.png" />
-    <Content Include="Resources\drawable\profile2.png" />
-    <Content Include="Resources\drawable\system.png" />
-    <Content Include="Resources\drawable\system2.png" />
+    <AndroidResource Include="Resources\drawable\avatar.png" />
+    <AndroidResource Include="Resources\drawable\dark.png" />
+    <AndroidResource Include="Resources\drawable\dark2.png" />
+    <AndroidResource Include="Resources\drawable\edit.png" />
+    <AndroidResource Include="Resources\drawable\edit2.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
+    <AndroidResource Include="Resources\drawable\profile2.png" />
+    <AndroidResource Include="Resources\drawable\system.png" />
+    <AndroidResource Include="Resources\drawable\system2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\light.png" />
+    <AndroidResource Include="Resources\drawable\light2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

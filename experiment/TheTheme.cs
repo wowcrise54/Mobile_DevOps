@@ -1,4 +1,6 @@
-﻿using System;
+﻿using experiment.Helpers;
+using Microsoft.VisualStudio.TestPlatform.PlatformAbstractions.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
@@ -24,7 +26,18 @@ namespace experiment
                     App.Current.UserAppTheme = OSAppTheme.Dark;
                     break;
             }
-
+            var myCustomColor = Color.FromHex("#D499A0");
+            var e = DependencyService.Get<InterFace>();
+            if (App.Current.RequestedTheme == OSAppTheme.Dark)
+            {
+                e?.SetStatusBarColor(Color.Black, false);
+             
+            }
+            else
+            {
+                e?.SetStatusBarColor(myCustomColor, true);
+              
+            }
         }
     }
 }

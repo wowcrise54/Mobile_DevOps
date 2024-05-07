@@ -16,7 +16,7 @@
     <!--<item name="colorAccent">#FF4081</item>-->
 	  <item name="android:windowBackground">@color/colorSplash</item>
 	  <item name="colorPrimary">#181818</item>
-	  <item name="colorPrimaryDark">#D499A0</item>
+	  <item name="colorPrimaryDark">#000000</item>
 	  <item name="colorAccent">#A93240</item>
 	  
   </style>
