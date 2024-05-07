@@ -12,25 +12,25 @@
             android:TabbedPage.IsSmoothScrollEnabled="False">
 
 
-    <NavigationPage Title="Главная" BarTextColor="{AppThemeBinding Dark=White, Light=White}" IconImageSource="main.png">
+    <NavigationPage Title="Главная" BarTextColor="{AppThemeBinding Dark=White, Light=Black}" IconImageSource="main.png">
         <x:Arguments>
             <local:Home x:Name="Home" Title="Главная" />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Избранное" BarTextColor="{AppThemeBinding Dark=White, Light=White}"  IconImageSource="favourite.png">
+    <NavigationPage Title="Избранное" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="favourite.png">
         <x:Arguments>
             <local:like x:Name="like" Title="Избранное" />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Праздники" BarTextColor="{AppThemeBinding Dark=White, Light=White}" IconImageSource="holidays.png">
+    <NavigationPage Title="Праздники" BarTextColor="{AppThemeBinding Dark=White, Light=Black}" IconImageSource="holidays.png">
         <x:Arguments>
             <local:holidays x:Name="holidays" Title="Праздники"/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Настройки" BarTextColor="{AppThemeBinding Dark=White, Light=White}"  IconImageSource="settings.png">
+    <NavigationPage Title="Настройки" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="settings.png">
         <x:Arguments>
             <local:settings x:Name="settings" Title="Настройки"/>
         </x:Arguments>

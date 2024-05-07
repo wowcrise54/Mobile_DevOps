@@ -7,35 +7,76 @@
 
     <ContentPage.ToolbarItems>
 
-        <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default" Clicked="ProfileButton"/>
+        <ToolbarItem Text="Профиль" IconImageSource="{AppThemeBinding Dark=profile.png, Light=profile2.png}" Priority="0" Order="Default" Clicked="ProfileButton"/>
  
     </ContentPage.ToolbarItems>
 
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-   
-        <RadioButton 
-                      x:Name="RadioButtonSystem"
-                     GroupName="themeGroup"
-                     Content="System Theme"
-                     Style="{DynamicResource GlobalLabelStyle}"
-                     CheckedChanged="RadioButton_CheckedChanged"
-                     Value="System" />
+    <StackLayout Margin="20,50,20,0" >
 
-        <RadioButton 
+        <Label Text="Тема" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="20" FontFamily="inglobalbold"/>
+        
+        <StackLayout BackgroundColor="Transparent" Orientation="Horizontal" Margin="0,10,0,0">
+
+            <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#CDCDCD}" CornerRadius="35" HorizontalOptions="StartAndExpand" Padding="15,20,15,0">
+                <StackLayout HorizontalOptions="Center" Padding="8,0">
+                    <Image Source="{AppThemeBinding Dark=light.png, Light=light2.png}" WidthRequest="35" HeightRequest="35"/>
+                    <Label Text="Светлая" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="14" FontFamily="inglobal"/>
+                    <RadioButton 
+                     HorizontalOptions="Center"
                      x:Name="RadioButtonLight"
                      GroupName="themeGroup"
-                     Content="Light Theme"
                      Style="{DynamicResource GlobalLabelStyle}"
                      CheckedChanged="RadioButton_CheckedChanged"
-                     Value="Light" />
+                     Value="Light"/>
+                </StackLayout>
 
-        <RadioButton 
-                      x:Name="RadioButtonDark"
+            </Frame>
+
+            <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#CDCDCD}" CornerRadius="35" HorizontalOptions="CenterAndExpand" Padding="15,25,15,0">
+                <StackLayout HorizontalOptions="Center" Padding="12,0">
+                    <Image Source="{AppThemeBinding Dark=dark.png, Light=dark2.png}" WidthRequest="30" HeightRequest="30"/>
+                    <Label Text="Темная" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="14" FontFamily="inglobal"/>
+                    <RadioButton
+                     HorizontalOptions="Center"
+                     x:Name="RadioButtonDark"
                      GroupName="themeGroup"
-                     Content="Dark Theme"
                      Style="{DynamicResource GlobalLabelStyle}"
                      CheckedChanged="RadioButton_CheckedChanged"
-                     Value="Dark" />
+                     Value="Dark"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#CDCDCD}" CornerRadius="35" HorizontalOptions="EndAndExpand" Padding="15,25,15,0">
+                <StackLayout HorizontalOptions="Center">
+                    <Image Source="{AppThemeBinding Dark=system.png, Light=system2.png}" WidthRequest="30" HeightRequest="30"/>
+                    <Label Text="Системная" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="14" FontFamily="inglobal"/>
+                    <RadioButton
+                     HorizontalOptions="Center"
+                     x:Name="RadioButtonSystem"
+                     GroupName="themeGroup"
+                     Style="{DynamicResource GlobalLabelStyle}"
+                     CheckedChanged="RadioButton_CheckedChanged"
+                     Value="System"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+
+        <Label Text="Язык интерфейса" FontSize="20" FontFamily="inglobalbold" TextColor="{AppThemeBinding Dark=white, Light=black}" Margin="0,50,0,10"/>
+        <StackLayout BackgroundColor="Transparent">
+            <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#CDCDCD}" Padding="0" CornerRadius="35">
+                <StackLayout Margin="20">
+                    <Picker x:Name="languagePicker" FontFamily="inglobal" TextColor="{AppThemeBinding Dark=white, Light=black}">
+                        <Picker.Items>
+                            <x:String>Русский</x:String>
+                            <x:String>English</x:String>
+                            <x:String>Deutsch</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
     </StackLayout>
+    
 </ContentPage>

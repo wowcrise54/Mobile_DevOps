@@ -5,62 +5,62 @@
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Профиль" IconImageSource="profile.png" Priority="0" Order="Default" Clicked="ProfileButton"/>
+        <ToolbarItem Text="Профиль" IconImageSource="{AppThemeBinding Dark=profile.png, Light=profile2.png}" Priority="0" Order="Default" Clicked="ProfileButton"/>
     </ContentPage.ToolbarItems>
     
     
 
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
-            <StackLayout>
-                
-                <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
-                    <Frame BackgroundColor="Transparent" Padding="0">
-                        <StackLayout>
-                            <Image Source="farsh.png">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnKabachok"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                            <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}" />
-                        </StackLayout>
-                    </Frame>
 
-                    <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
-                        <StackLayout>
-                            <Image Source="grudka.png">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnGrudka"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                            <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-                        </StackLayout>
-                    </Frame>
+            <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
 
-                    <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
-                        <StackLayout>
-                            <Image Source="chicken.png">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnChicken"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                            <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-                        </StackLayout>
-                    </Frame>
+                <Frame BackgroundColor="Transparent" Padding="0">
+                    <StackLayout>
+                        <Image Source="farsh.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnKabachok"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}" />
+                    </StackLayout>
+                </Frame>
 
-                    <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,100">
-                        <StackLayout>
-                            <Image Source="salat.png">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnSalat"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                            <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
 
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
+                    <StackLayout>
+                        <Image Source="grudka.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnGrudka"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
+                    <StackLayout>
+                        <Image Source="chicken.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnChicken"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,100">
+                    <StackLayout>
+                        <Image Source="salat.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSalat"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
+
         </ScrollView>
 
     </StackLayout>
