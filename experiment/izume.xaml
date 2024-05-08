@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.izume">
+             x:Class="experiment.izume"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
     
     <Label Text="Изюм = чернослив" FontSize="50" FontFamily="inglobal" TextColor="White" Margin="10,20,0,0"/>
 </ContentPage>
