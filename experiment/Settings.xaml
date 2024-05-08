@@ -66,7 +66,7 @@
         <Label Text="Язык интерфейса" FontSize="20" FontFamily="inglobalbold" TextColor="{AppThemeBinding Dark=white, Light=black}" Margin="0,50,0,10"/>
         <StackLayout BackgroundColor="Transparent">
             <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#CDCDCD}" Padding="0" CornerRadius="35">
-                <StackLayout Margin="20">
+                <StackLayout Padding="30,10">
                     <Picker x:Name="languagePicker" FontFamily="inglobal" TextColor="{AppThemeBinding Dark=white, Light=black}">
                         <Picker.Items>
                             <x:String>Русский</x:String>

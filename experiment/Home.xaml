@@ -79,34 +79,44 @@
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
                     <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0" >
-                            <StackLayout >
-                                <Image Source="recipe1.png" WidthRequest="110" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnRecipe"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                            <StackLayout>
+                                <Frame Padding="0" CornerRadius="30">
+                                    <Image Source="aromat.png" Scale="1.4" HeightRequest="120">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnRecipe"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <Label Text="Ароматные куличи на Пасху" FontFamily="inglobalbold" FontSize="14" Style="{StaticResource GlobalLabelStyle}" WidthRequest="240"/>
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="5,0,0,0" Margin="5,0,0,0">
                             <StackLayout>
-                                <Image Source="izum.png" WidthRequest="110" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnIzume"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="30">
+                                    <Image Source="izum.png" Scale="1.4" HeightRequest="120">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnIzume"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <Label Text="Сладкий рис с сушенной хурмой и черносливом" FontFamily="inglobalbold" FontSize="14" Style="{StaticResource GlobalLabelStyle}" WidthRequest="240"/>
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="Transparent" Padding="5,0,0,0" Margin="5,0,0,0">
-                            <StackLayout>
-                                <Image Source="more.png" WidthRequest="110" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnImageTapped"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+
+                        <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#ABABAB}" Padding="0" Margin="10,0,0,35" 
+                               CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Padding="15,0">
+                                <Frame VerticalOptions="CenterAndExpand" CornerRadius="30" Padding="13,2">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="Больше" FontSize="13" FontFamily="inglobal" TextColor="Black"/>
+                                        <Image Source="moreall.png" WidthRequest="8" HeightRequest="5"/>
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -117,11 +127,13 @@
                     <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0" >
                             <StackLayout>
-                                <Image Source="hearts.png" WidthRequest="110" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnHearts"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="30">
+                                    <Image Source="hearts.png" Scale="2" HeightRequest="120">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnHearts"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <StackLayout Orientation="Vertical" WidthRequest="240">
                                     <Label>
                                         <Label.FormattedText>
@@ -137,11 +149,14 @@
 
                         <Frame BackgroundColor="Transparent" Padding="5,0,0,0" Margin="5,0,0,0">
                             <StackLayout>
-                                <Image Source="fastfood.png" WidthRequest="110" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnFastfood"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="30">
+                                    <Image Source="fastfood.png" Scale="2" HeightRequest="120">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnFastfood"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+
                                 <StackLayout Orientation="Vertical" WidthRequest="240">
                                     <Label>
                                         <Label.FormattedText>
@@ -155,15 +170,19 @@
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="Transparent" Padding="5,0,0,0" Margin="5,0,0,0">
-                            <StackLayout>
-                                <Image Source="more.png" WidthRequest="110" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnImageTapped_1"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                        <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#ABABAB}" Padding="0" Margin="10,0,0,50" 
+                               CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped_1"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Padding="15,0">
+                                <Frame VerticalOptions="CenterAndExpand" CornerRadius="30" Padding="13,2">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="Больше" FontSize="13" FontFamily="inglobal" TextColor="Black"/>
+                                        <Image Source="moreall.png" WidthRequest="8" HeightRequest="5"/>
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
-
                         </Frame>
                     </StackLayout>
                 </ScrollView>
@@ -172,36 +191,45 @@
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" Margin="0,0,0,100">
                     <StackLayout Orientation="Horizontal" Padding="10,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0" >
-                            <StackLayout >
-                                <Image Source="food.png" WidthRequest="240" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnFood"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                                <Label Text="Все о еде" FontSize="14" FontFamily="inglobalbold" Style="{StaticResource GlobalLabelStyle}" FontAttributes="Bold"/>
+                            <StackLayout>
+                                <Frame Padding="0" CornerRadius="30">
+                                    <Image Source="food.png" Scale="1.5" HeightRequest="120">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnFood"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+                                <Label Text="Все о еде" FontSize="14" FontFamily="inglobalbold" Style="{StaticResource GlobalLabelStyle}" FontAttributes="Bold" WidthRequest="240"/>
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="5,0,0,0" Margin="5,0,0,0">
                             <StackLayout>
-                                <Image Source="zozh.png" WidthRequest="240" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnZozh"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="30">
+                                    <Image Source="zozh.png" Scale="1.5" HeightRequest="120">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnZozh"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+
                                 <Label Text="ЗОЖ" FontSize="14" FontFamily="inglobalbold" Style="{StaticResource GlobalLabelStyle}" WidthRequest="240" FontAttributes="Bold"/>
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="Transparent" Padding="5,0,0,0" Margin="5,0,0,0">
-                            <StackLayout>
-                                <Image Source="more.png" WidthRequest="110" HeightRequest="120">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnImageTapped_2"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                        <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#ABABAB}" Padding="0" Margin="10,0,0,20" 
+                               CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnImageTapped_2"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Padding="15,0">
+                                <Frame VerticalOptions="CenterAndExpand" CornerRadius="30" Padding="13,2">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="Больше" FontSize="13" FontFamily="inglobal" TextColor="Black"/>
+                                        <Image Source="moreall.png" WidthRequest="8" HeightRequest="5"/>
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
-
                         </Frame>
                     </StackLayout>
                 </ScrollView>

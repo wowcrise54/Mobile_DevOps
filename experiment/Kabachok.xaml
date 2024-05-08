@@ -4,7 +4,59 @@
              x:Class="experiment.Kabachok"
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Профиль" IconImageSource="{AppThemeBinding Dark=profile.png, Light=profile2.png}" Priority="0" Order="Default" Clicked="ProfileButton"/>
+    </ContentPage.ToolbarItems>
 
-    <Label Text="Кабачок" FontSize="50" FontFamily="inglobal" TextColor="White" Margin="10,20,0,0"/>
+    <StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout>
+
+                <Image Source="farsh.png" Scale="1.1"/>
+                <StackLayout>
+                    <Frame BackgroundColor="Transparent" Padding="0" Margin="20,20">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Фаршированные кабачки" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                                   FontSize="20" FontFamily="inglobalbold" HorizontalOptions="StartAndExpand"/>
+                            <Image Source="{AppThemeBinding Dark=dark_not_like.png, Light=light_not_like.png}" 
+                                   WidthRequest="18" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Padding="15,0">
+                    <Frame BackgroundColor="Transparent" BorderColor="#646464" CornerRadius="20" Padding="12,10,12,8">
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Image Source="watch.png" WidthRequest="30" HeightRequest="30"/>
+                            <Label Text="30 мин" TextColor="{AppThemeBinding Dark=white, Light=black}"
+                                   FontFamily="inglobal" FontSize="14"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" BorderColor="#646464" CornerRadius="20" Padding="12,10,12,8">
+                        <StackLayout Padding="0,10,0,0">
+                            <StackLayout Orientation="Horizontal" Spacing="4" HorizontalOptions="CenterAndExpand">
+                                <Image Source="star1.png" WidthRequest="21" HeightRequest="21"/>
+                                <Image Source="star1.png" WidthRequest="21" HeightRequest="21"/>
+                                <Image Source="star1.png" WidthRequest="21" HeightRequest="21"/>
+                                <Image Source="star1.png" WidthRequest="21" HeightRequest="21"/>
+                                <Image Source="star2.png" WidthRequest="21" HeightRequest="21"/>
+                            </StackLayout>
+                            <Label Text="Сложность приготовления" TextColor="{AppThemeBinding Dark=white, Light=black}"
+                                   FontFamily="inglobal" FontSize="14"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" BorderColor="#646464" CornerRadius="20" Padding="12,10,12,8">
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Image Source="nice.png" WidthRequest="30" HeightRequest="30"/>
+                            <Label Text="30 мин" TextColor="{AppThemeBinding Dark=white, Light=black}"
+                                   FontFamily="inglobal" FontSize="14"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
 
 </ContentPage>

@@ -18,44 +18,55 @@
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">
                             <StackLayout>
-                                <Image Source="corzina.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnCorzinaColors"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="corzina.png" Scale="1.3" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnCorzinaColors"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <Label Text="Корзинка цветная" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
                             <StackLayout>
-                                <Image Source="kulich.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnKulich"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="kulich.png" Scale="1.3" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnKulich"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <Label Text="Куличик с ягодами" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
                             <StackLayout>
-                                <Image Source="pasha.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnPusha"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="pasha.png" Scale="1.6" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnPusha"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <Label Text="Пасха 'Сладость'" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
-                            <StackLayout>
-                                <Image Source="more.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnMore1"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                        <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#ABABAB}" Padding="0" Margin="10,0,0,20" 
+                               CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnMore1"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Padding="15,0">
+                                <Frame VerticalOptions="CenterAndExpand" CornerRadius="30" Padding="13,2">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="Больше" FontSize="13" FontFamily="inglobal" TextColor="Black"/>
+                                        <Image Source="moreall.png" WidthRequest="8" HeightRequest="5"/>
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -66,44 +77,58 @@
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">
                             <StackLayout>
-                                <Image Source="goose.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnGoose"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="goose.png" Scale="1.9" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnGoose"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+
                                 <Label Text="Новогодний гусь" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
                             <StackLayout>
-                                <Image Source="olive.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnOlive"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="olive.png" Scale="1.8" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnOlive"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+
                                 <Label Text="Оливье 'Высотка'" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
                             <StackLayout>
-                                <Image Source="seld.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnSeld"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="seld.png" Scale="1.6" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnSeld"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+
                                 <Label Text="Сельдь под шубой" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
-                            <StackLayout>
-                                <Image Source="more.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnMore2"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                        <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#ABABAB}" Padding="0" Margin="10,0,0,20" 
+                               CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnMore2"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Padding="15,0">
+                                <Frame VerticalOptions="CenterAndExpand" CornerRadius="30" Padding="13,2">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="Больше" FontSize="13" FontFamily="inglobal" TextColor="Black"/>
+                                        <Image Source="moreall.png" WidthRequest="8" HeightRequest="5"/>
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -114,44 +139,56 @@
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">
                             <StackLayout>
-                                <Image Source="tort.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnTort"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="tort.png" Scale="1.8" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnTort"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <Label Text="Блинный торт" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}" />
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
                             <StackLayout>
-                                <Image Source="kurnik.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnKurnik"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="kurnik.png" Scale="1.6" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnKurnik"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
                                 <Label Text="Курник 'Грибник'" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
                         <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
                             <StackLayout>
-                                <Image Source="tartaletki.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnTartaletki"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                <Frame Padding="0" CornerRadius="15">
+                                    <Image Source="tartaletki.png" Scale="1.6" WidthRequest="144" HeightRequest="150">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnTartaletki"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Frame>
+
                                 <Label Text="Тарталетки" FontFamily="inglobal" FontSize="14" Style="{DynamicResource GlobalLabelStyle}"/>
                             </StackLayout>
                         </Frame>
 
-                        <Frame BackgroundColor="Transparent" Padding="10,0,0,0">
-                            <StackLayout>
-                                <Image Source="more.png" WidthRequest="144" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnMore3"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
+                        <Frame BackgroundColor="{AppThemeBinding Dark=#646464, Light=#ABABAB}" Padding="0" Margin="10,0,0,20" 
+                               CornerRadius="30">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnMore3"/>
+                            </Frame.GestureRecognizers>
+                            <StackLayout Padding="15,0">
+                                <Frame VerticalOptions="CenterAndExpand" CornerRadius="30" Padding="13,2">
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Label Text="Больше" FontSize="13" FontFamily="inglobal" TextColor="Black"/>
+                                        <Image Source="moreall.png" WidthRequest="8" HeightRequest="5"/>
+                                    </StackLayout>
+                                </Frame>
                             </StackLayout>
                         </Frame>
                     </StackLayout>

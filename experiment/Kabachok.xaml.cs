@@ -16,5 +16,10 @@ namespace experiment
         {
             InitializeComponent();
         }
+
+        private async void ProfileButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilePage());
+        }
     }
 }
