@@ -79,7 +79,7 @@
                 </StackLayout>
 
                 <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
@@ -97,7 +97,7 @@
                 </StackLayout>
 
                 <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
@@ -115,7 +115,7 @@
                 </StackLayout>
 
                 <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
@@ -131,7 +131,7 @@
                 </StackLayout>
 
                 <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="20,30,20,0">
@@ -180,11 +180,35 @@
                     </StackLayout>
                 </Frame>
 
+                <StackLayout Orientation="Horizontal" Margin="20,20,20,0">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,8">
+                        <Label Text="3 шаг" FontSize="20" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="#A93240" CornerRadius="20" Padding="30,8">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnTime"/>
+                        </Frame.GestureRecognizers>
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Label Text="15:00 мин" FontSize="18" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <Frame BackgroundColor="{AppThemeBinding Dark=#2D2D2D, Light=#CDCDCD}" CornerRadius="35" Margin="0,20">
+                    <StackLayout>
+                        <Label Text="Описание шага, которого пока нет, но оно обязательно появится. А пока его нет накидаю пару букав пи пи 
+                               ипип ипи ипи ипи ипип ипи ипи вщ щв щв щвщ щв щв щв щв щв щв щв щв  "
+                               FontSize="18" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                    </StackLayout>
+                </Frame>
+
                 <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="35,16" Margin="0,30,0,40">
                     <Label Text="Оставить отзыв" 
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>
                 </Frame>
+                
             </StackLayout>
         </ScrollView>
     </StackLayout>

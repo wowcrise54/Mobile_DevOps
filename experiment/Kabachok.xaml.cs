@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,22 +47,31 @@ namespace experiment
         }
         private System.Timers.Timer _timer;
         private TimeSpan _timeLeft;
+
         private void OnTime(object sender, EventArgs e)
         {
             if (_timer != null && _timer.Enabled)
-                return; 
+                return; // Если таймер уже запущен, пропускаем запуск нового
 
-           
-            string timeText = timeLabel.Text.Replace(" мин", ""); 
-            if (TimeSpan.TryParse(timeText, out _timeLeft))
+            // Разбираем текст для получения времени
+            string timeText = timeLabel.Text.Replace(" мин", "");
+
+            try
             {
-                _timer = new System.Timers.Timer(1000); 
+                // Заменяем ':' на '.', чтобы соответствовать формату TimeSpan
+                _timeLeft = TimeSpan.ParseExact(timeText, @"mm\:ss", CultureInfo.InvariantCulture);
+
+                _timer = new System.Timers.Timer(1000); // Таймер с интервалом в 1 секунду
                 _timer.Elapsed += OnTimerElapsed;
                 _timer.Start();
             }
+            catch (FormatException)
+            {
+                // Обработка ошибки при неправильном формате строки времени
+                Debug.WriteLine("Неправильный формат времени");
+            }
         }
-       
-  
+
         private void OnTimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             _timeLeft = _timeLeft.Subtract(TimeSpan.FromSeconds(1));
@@ -78,7 +89,7 @@ namespace experiment
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    timeLabel.Text = $"{_timeLeft:mm\\:ss} мин";
+                    timeLabel.Text = $"{_timeLeft:mm\\:ss} мин"; // Убедитесь, что формат соответствует вашему отображению
                 });
             }
         }
