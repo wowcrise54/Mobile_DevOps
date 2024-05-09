@@ -17,14 +17,14 @@
                     <Frame BackgroundColor="Transparent" Padding="0" Margin="20,20">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Фаршированные кабачки" TextColor="{AppThemeBinding Dark=white, Light=black}" 
-                                   FontSize="20" FontFamily="inglobalbold" HorizontalOptions="StartAndExpand"/>
+                                   FontSize="24" FontFamily="inglobalbold" HorizontalOptions="StartAndExpand"/>
                             <Image Source="{AppThemeBinding Dark=dark_not_like.png, Light=light_not_like.png}" 
                                    WidthRequest="18" HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Padding="15,0">
+                <StackLayout Orientation="Horizontal" Padding="12,0">
                     <Frame BackgroundColor="Transparent" BorderColor="#646464" CornerRadius="20" Padding="12,10,12,8">
                         <StackLayout HorizontalOptions="CenterAndExpand">
                             <Image Source="watch.png" WidthRequest="30" HeightRequest="30"/>
@@ -50,11 +50,131 @@
                     <Frame BackgroundColor="Transparent" BorderColor="#646464" CornerRadius="20" Padding="12,10,12,8">
                         <StackLayout HorizontalOptions="CenterAndExpand">
                             <Image Source="nice.png" WidthRequest="30" HeightRequest="30"/>
-                            <Label Text="30 мин" TextColor="{AppThemeBinding Dark=white, Light=black}"
+                            <Label Text="Отзывы" TextColor="{AppThemeBinding Dark=white, Light=black}"
                                    FontFamily="inglobal" FontSize="14"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
+
+                <Label Text="Ингредиенты" FontSize="20" FontFamily="inglobalbold"
+                       TextColor="{AppThemeBinding Dark=white, Light=black}" Margin="20,20,20,0"/>
+
+                <StackLayout Orientation="Horizontal" Margin="20,20,20,0" Padding="0,10,0,0">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+
+                        <Label Text="Первый" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                    
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+
+                        <Label Text="Второй" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+
+                        <Label Text="Третий" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <Label Text="Четвертый" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
+                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=blackline.png}" WidthRequest="320"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="20,30,20,0">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,8">
+                        <Label Text="1 шаг" FontSize="20" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="#A93240" CornerRadius="20" Padding="30,8">
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Label Text="05:00 мин" FontSize="18" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <Frame BackgroundColor="{AppThemeBinding Dark=#2D2D2D, Light=#CDCDCD}" CornerRadius="35" Margin="0,20,0,0">
+                    <StackLayout>
+                        <Label Text="Описание шага, которого пока нет, но оно обязательно появится. А пока его нет накидаю пару букав пи пи 
+                               ипип ипи ипи ипи ипип ипи ипи вщ щв щв щвщ щв щв щв щв щв щв щв щв  "
+                               FontSize="18" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout Orientation="Horizontal" Margin="20,40,20,0">
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,8">
+                        <Label Text="2 шаг" FontSize="20" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+                    </Frame>
+
+                    <Frame BackgroundColor="#A93240" CornerRadius="20" Padding="30,8">
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Label Text="10:00 мин" FontSize="18" TextColor="White" FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <Frame BackgroundColor="{AppThemeBinding Dark=#2D2D2D, Light=#CDCDCD}" CornerRadius="35" Margin="0,20">
+                    <StackLayout>
+                        <Label Text="Описание шага, которого пока нет, но оно обязательно появится. А пока его нет накидаю пару букав пи пи 
+                               ипип ипи ипи ипи ипип ипи ипи вщ щв щв щвщ щв щв щв щв щв щв щв щв  "
+                               FontSize="18" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="35,16" Margin="0,30,0,40">
+                    <Label Text="Оставить отзыв" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>
+                </Frame>
             </StackLayout>
         </ScrollView>
     </StackLayout>
