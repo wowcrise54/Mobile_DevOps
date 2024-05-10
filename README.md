@@ -14,19 +14,19 @@
 ## Демонстрация приложения
 
 <div align="center" style="display: flex; justify-content: center;">
-  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/ddda0013-1d67-4404-a240-f202db50652a" alt="Frame 1" width="33%" style="max-width: 33.33%;">
-  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/7bdb2f6c-f0e0-4c5b-8d16-aa0c0783dd25" alt="Frame 2" width="33%" style="max-width: 33.33%;">
-  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/66574285-92c8-444a-b660-ca3ade7ab919" alt="Frame 3" width="33%" style="max-width: 33.33%;">
+  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/ddda0013-1d67-4404-a240-f202db50652a" alt="Frame 1" width="22%" style="max-width: 22.22%;">
+  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/7bdb2f6c-f0e0-4c5b-8d16-aa0c0783dd25" alt="Frame 2" width="22%" style="max-width: 22.22%;">
+  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/66574285-92c8-444a-b660-ca3ade7ab919" alt="Frame 3" width="22%" style="max-width: 22.22%;">
 </div>
 
 <div align="center" style="display: flex; justify-content: center;">
-  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/c6b19d4f-6277-4953-88aa-b0c347b78672" alt="Frame 1" width="33%" style="max-width: 33.33%;">
-  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/fd95d3af-5ffc-4567-869e-4c96f13206fd" alt="Frame 2" width="33%" style="max-width: 33.33%;">
-  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/a33262af-63a7-4d9f-a905-d3806aa7cdbb" alt="Frame 3" width="33%" style="max-width: 33.33%;">
+  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/c6b19d4f-6277-4953-88aa-b0c347b78672" alt="Frame 1" width="22%" style="max-width: 22.22%;">
+  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/fd95d3af-5ffc-4567-869e-4c96f13206fd" alt="Frame 2" width="22%" style="max-width: 22.22%;">
+  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/a33262af-63a7-4d9f-a905-d3806aa7cdbb" alt="Frame 3" width="22%" style="max-width: 22.22%;">
 </div>
 
 <div align="center" style="display: flex; justify-content: center;">
-  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/88e1228a-1518-4668-879f-dbce5872afb3" alt="Frame 1" width="33%" style="max-width: 33.33%;">
+  <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/88e1228a-1518-4668-879f-dbce5872afb3" alt="Frame 1" width="22%" style="max-width: 22.22%;">
 </div>
 
 
