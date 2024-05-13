@@ -281,5 +281,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\system2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\like1_dark.png" />
+    <AndroidResource Include="Resources\drawable\like2_dark.png" />
+    <AndroidResource Include="Resources\drawable\like3_dark.png" />
+    <AndroidResource Include="Resources\drawable\like4_dark.png" />
+    <AndroidResource Include="Resources\drawable\like5_dark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

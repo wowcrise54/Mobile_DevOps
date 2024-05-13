@@ -15,7 +15,8 @@ namespace experiment
 		public StartPage ()
 		{
 			InitializeComponent ();
-		}
+            
+        }
 
         private async void OnLoginPage(object sender, EventArgs e)
         {
