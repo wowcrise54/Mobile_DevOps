@@ -33,5 +33,10 @@ namespace experiment
         {
             await Navigation.PushAsync(new Politica());
         }
+
+        private async void OnStartPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StartPage());
+        }
     }
 }

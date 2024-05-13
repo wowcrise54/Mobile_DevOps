@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="experiment.StartPage"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=#FCDCE0}">
+
+    <StackLayout>
+        <Label Text="Пропустить" TextColor="{AppThemeBinding Dark=#FCDCE0, Light=#A93240}" FontSize="18" FontFamily="inglobal"
+               HorizontalOptions="EndAndExpand" Margin="0,30,30,0">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnMainPage"/>
+            </Label.GestureRecognizers>
+        </Label>
+        
+        <Image Source="StartPageLogo" WidthRequest="316" HeightRequest="314" Margin="0,100,0,0"/>
+
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="100,12" Margin="0,50,0,0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLoginPage"/>
+                </Frame.GestureRecognizers>
+                <Label Text="Войти" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>
+            </Frame>
+            <Label Text="Зарегистрироваться" TextColor="{AppThemeBinding Dark=white, Light=#A93240}" FontSize="16" FontFamily="inglobal"
+                   HorizontalOptions="CenterAndExpand" TextDecorations="Underline" Padding="10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRegisterPage"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

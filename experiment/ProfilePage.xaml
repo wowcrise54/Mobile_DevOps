@@ -73,45 +73,55 @@
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnUsers"/>
+                    </StackLayout.GestureRecognizers>
                     <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Label Text="Пользовательское соглашение" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnUsers"/>
-                                </Label.GestureRecognizers>
-                            </Label>
+                            <Label Text="Пользовательское соглашение" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                                   FontFamily="inglobal"/>
                         </StackLayout>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Image Source="{AppThemeBinding Dark=all.png, Light=all2.png}" WidthRequest="10">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnUsers"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+                            <Image Source="{AppThemeBinding Dark=all.png, Light=all2.png}" WidthRequest="10"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPolitica"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Label Text="Политика конфицидиальности" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                                   FontFamily="inglobal"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                        <StackLayout>
+                            <Image Source="{AppThemeBinding Dark=all.png, Light=all2.png}" WidthRequest="10"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="25,10,25,70" Padding="0,10,0,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnStartPage"/>
+                    </StackLayout.GestureRecognizers>
                     <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Label Text="Политика конфицидиальности" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnPolitica"/>
-                                </Label.GestureRecognizers>
-                            </Label>
+                            <Label Text="Страница авторизации" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                                   FontFamily="inglobal"/>
                         </StackLayout>
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Image Source="{AppThemeBinding Dark=all.png, Light=all2.png}" WidthRequest="10">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnPolitica"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+                            <Image Source="{AppThemeBinding Dark=all.png, Light=all2.png}" WidthRequest="10"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
