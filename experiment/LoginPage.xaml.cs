@@ -16,5 +16,10 @@ namespace experiment
 		{
 			InitializeComponent ();
 		}
-	}
+
+        private async void OnMainPage(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
+    }
 }

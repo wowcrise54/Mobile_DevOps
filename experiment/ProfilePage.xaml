@@ -90,7 +90,7 @@
                     </Frame>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
+                <StackLayout Orientation="Horizontal" Margin="25,10,25,70" Padding="0,10,0,10">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnPolitica"/>
                     </StackLayout.GestureRecognizers>
@@ -108,27 +108,10 @@
                     </Frame>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="25,10,25,70" Padding="0,10,0,10">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnStartPage"/>
-                    </StackLayout.GestureRecognizers>
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Label Text="Страница авторизации" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" 
-                                   FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Image Source="{AppThemeBinding Dark=all.png, Light=all2.png}" WidthRequest="10"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
 
                 <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="35,16" Margin="0,0,0,40">
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnFeedBack"/>
+                        <TapGestureRecognizer Tapped="OnStartPage"/>
                     </Frame.GestureRecognizers>
                     <Label Text="Выйти с аккаунта" 
                            HorizontalTextAlignment="Center" 

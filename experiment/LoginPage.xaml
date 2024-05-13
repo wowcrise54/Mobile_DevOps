@@ -1,23 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.LoginPage">
+             x:Class="experiment.LoginPage"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
     <StackLayout Margin="30,0">
         <Label Text="Авторизация" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="22" FontFamily="inglobalbold"
                HorizontalOptions="Center" Margin="0,200,0,0"/>
 
         <Frame CornerRadius="35" BorderColor="#A93240" BackgroundColor="Transparent" Margin="0,30,0,0" Padding="20,6">
-            <Entry Placeholder="Почта" PlaceholderColor="White" FontFamily="inglobal"/>
+            <Entry Placeholder="Почта" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                   PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
         </Frame>
 
         <Frame CornerRadius="35" BorderColor="#A93240" BackgroundColor="Transparent" Margin="0,10,0,0" Padding="20,6">
-            <Entry Placeholder="Пароль" PlaceholderColor="White" IsPassword="True" FontFamily="inglobal"/>
+            <Entry Placeholder="Пароль" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                   PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" IsPassword="True" FontFamily="inglobal"/>
         </Frame>
 
-        <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="70,12" Margin="0,30,0,0">
+        <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="70,14" Margin="0,30,0,0">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer/>
+                <TapGestureRecognizer Tapped="OnMainPage"/>
             </Frame.GestureRecognizers>
             <Label Text="Войти" 
                    HorizontalTextAlignment="Center" 
