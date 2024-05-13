@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="experiment.RegisterPage">
+             x:Class="experiment.RegisterPage"
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
     <StackLayout Margin="30,0">
         <Label Text="Регистрация" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="22" FontFamily="inglobalbold"
