@@ -204,6 +204,9 @@
                 </Frame>
 
                 <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="35,16" Margin="0,30,0,40">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Review"/>
+                    </Frame.GestureRecognizers>
                     <Label Text="Оставить отзыв" 
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>

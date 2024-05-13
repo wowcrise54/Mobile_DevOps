@@ -6,9 +6,7 @@
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
     <ContentPage.ToolbarItems>
-
-        <ToolbarItem Text="Изменить" IconImageSource="{AppThemeBinding Dark=edit.png, Light=edit2.png}" Order="Primary" Priority="1"/>
-
+        <ToolbarItem Text="Изменить" IconImageSource="{AppThemeBinding Dark=edit.png, Light=edit2.png}"  Order="Primary" Priority="1"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>

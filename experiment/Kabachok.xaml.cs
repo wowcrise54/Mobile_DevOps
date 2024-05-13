@@ -24,6 +24,11 @@ namespace experiment
             await Navigation.PushAsync(new ProfilePage());
         }
 
+        private async void Review(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new review());
+        }
+
         private void OnClick(object sender, EventArgs e)
         {
             var image = sender as Image;
@@ -93,5 +98,7 @@ namespace experiment
                 });
             }
         }
+
+
     }
 }

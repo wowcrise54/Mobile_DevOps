@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="experiment.review">
+
+    <StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <Label Text="Оцените блюдо" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="22" FontFamily="inglobalbold"
+                       HorizontalOptions="Center" Margin="0,50,0,0"/>
+                <Frame BackgroundColor="Transparent" Margin="0,60,0,0">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Сложность приготовления" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="20" FontFamily="inglobal"/>
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+                            <Image Source="star3.png" WidthRequest="43" HeightRequest="43"/>
+                            <Image Source="star3.png" WidthRequest="43" HeightRequest="43"/>
+                            <Image Source="star3.png" WidthRequest="43" HeightRequest="43"/>
+                            <Image Source="star3.png" WidthRequest="43" HeightRequest="43"/>
+                            <Image Source="star4.png" WidthRequest="43" HeightRequest="43"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Margin="0,60,0,0">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Text="Общее впечатление" TextColor="{AppThemeBinding Dark=white, Light=black}" FontSize="20" FontFamily="inglobal"
+                               HorizontalOptions="CenterAndExpand"/>
+                        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand" Margin="0,10,0,0">
+                            <Image Source="like_1.png" WidthRequest="36" HeightRequest="36"/>
+                            <Image Source="like_2.png" WidthRequest="36" HeightRequest="36"/>
+                            <Image Source="like_3.png" WidthRequest="36" HeightRequest="36"/>
+                            <Image Source="like_4.png" WidthRequest="36" HeightRequest="36"/>
+                            <Image Source="like_5.png" WidthRequest="36" HeightRequest="36"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="50,16" Margin="0,50,0,0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer/>
+                    </Frame.GestureRecognizers>
+                    <Label Text="Отправить" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
