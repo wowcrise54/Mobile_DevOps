@@ -9,7 +9,8 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.IsSwipePagingEnabled="False"
-            android:TabbedPage.IsSmoothScrollEnabled="False">
+            android:TabbedPage.IsSmoothScrollEnabled="False"
+            NavigationPage.HasNavigationBar="False">
 
 
     <NavigationPage Title="Главная" BarTextColor="{AppThemeBinding Dark=White, Light=Black}" IconImageSource="main.png">

@@ -11,12 +11,14 @@ namespace experiment
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            /*var StartPage = new StartPage();*/
+
+            MainPage = new NavigationPage(new StartPage());
             TheTheme.SetTheme();
         }
         protected override void OnStart()
         {
-            OnResume();
+
         }
 
         protected override void OnSleep()

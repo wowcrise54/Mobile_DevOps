@@ -18,6 +18,7 @@ namespace experiment
             Application.Current.RequestedThemeChanged += OnThemeChanged;
 
         }
+
         protected override void OnDisappearing()
         {
             Application.Current.RequestedThemeChanged -= OnThemeChanged;

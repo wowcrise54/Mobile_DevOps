@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.StartPage"
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=#FCDCE0}">
 
     <StackLayout>
@@ -11,8 +12,8 @@
                 <TapGestureRecognizer Tapped="OnMainPage"/>
             </Label.GestureRecognizers>
         </Label>
-        
-        <Image Source="StartPageLogo" WidthRequest="316" HeightRequest="314" Margin="0,100,0,0"/>
+
+        <Image Source="{AppThemeBinding Dark=StartPageLogo.png, Light=StartPageLogo2.png}" WidthRequest="316" HeightRequest="314" Margin="0,100,0,0"/>
 
         <StackLayout HorizontalOptions="CenterAndExpand">
             <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="100,12" Margin="0,50,0,0">
