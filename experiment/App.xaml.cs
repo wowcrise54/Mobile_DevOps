@@ -12,12 +12,11 @@ namespace experiment
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new StartPage());
             TheTheme.SetTheme();
         }
         protected override void OnStart()
         {
-            OnResume();
             var savedLanguage = Preferences.Get("AppLanguage", "English");
             CultureInfo culture;
 
