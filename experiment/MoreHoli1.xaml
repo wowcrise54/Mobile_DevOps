@@ -4,6 +4,126 @@
              x:Class="experiment.MoreHoli1"
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
-    <Label Text="Больше 1.1" FontSize="50" FontFamily="inglobal" TextColor="White" Margin="10,20,0,0"/>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Профиль" IconImageSource="{AppThemeBinding Dark=profile.png, Light=profile2.png}" Priority="0" Order="Default" Clicked="ProfileButton"/>
+    </ContentPage.ToolbarItems>
+
+
+
+    <StackLayout>
+        <ScrollView VerticalScrollBarVisibility="Never">
+
+            <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
+
+                <Frame BackgroundColor="Transparent" Padding="0">
+                    <StackLayout>
+                        <Frame Padding="0" CornerRadius="15">
+                            <Grid>
+                                <Image Source="corzina.png" HeightRequest="150" Aspect="AspectFill">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnCorzinaColors"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
+                        </Frame>
+                        <Label Text="Корзинка цветная" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}" />
+                    </StackLayout>
+                </Frame>
+
+
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
+                    <StackLayout>
+                        <Frame Padding="0" CornerRadius="15">
+                            <Grid>
+                                <Image Source="kulich.png" Aspect="AspectFill" HeightRequest="150">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnKulich"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
+                        </Frame>
+                        <Label Text="Куличик с ягодами" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
+                    <StackLayout>
+                        <Frame Padding="0" CornerRadius="15">
+                            <Grid>
+                                <Image Source="pasha.png" Aspect="AspectFill" HeightRequest="150">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnPusha"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
+                        </Frame>
+
+                        <Label Text="Пасха 'Сладость'" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,100">
+                    <StackLayout>
+                        <Frame Padding="0" CornerRadius="15">
+                            <Grid>
+                                <Image Source="salat.png" Aspect="AspectFill" HeightRequest="150">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnSalat"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
+                        </Frame>
+
+                        <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </ScrollView>
+
+    </StackLayout>
 
 </ContentPage>

@@ -15,14 +15,9 @@ namespace experiment
         public like()
         {
             InitializeComponent();
-            
-        }
-    
-        private void OnSearchClicked(object sender, EventArgs e)
-        {
 
-            DisplayAlert("Alert", "Edit button clicked!", "OK");
         }
+
 
         private async void ProfileButton(object sender, EventArgs e)
         {
@@ -43,6 +38,28 @@ namespace experiment
         private async void OnSalat(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Salat());
+        }
+
+        private void OnClick(object sender, EventArgs e)
+        {
+            var image = sender as Image;
+            if (image == null) return;
+
+
+            if (Application.Current.UserAppTheme == OSAppTheme.Dark)
+            {
+                if (image.Source.ToString().Contains("dark_not_like.png"))
+                    image.Source = "dark_like.png";
+                else
+                    image.Source = "dark_not_like.png";
+            }
+            else
+            {
+                if (image.Source.ToString().Contains("dark_not_like.png"))
+                    image.Source = "dark_like.png";
+                else
+                    image.Source = "dark_not_like.png";
+            }
         }
     }
 }

@@ -15,9 +15,24 @@ namespace experiment
         public Home()
         {
             InitializeComponent();
+            UpdateText();
+
+            MessagingCenter.Subscribe<LocalizationResourceManager>(this, "CultureChanged", (sender) =>
+            {
+                UpdateText();
+            });
+        }
+        private void UpdateText()
+        {
+            /*homeTitleLabel.Text = LocalizationResourceManager.Instance["HomeTitle"];*/
+            FromTheEditor.Text = LocalizationResourceManager.Instance["FromTheEditor"];
+            NewRecipes.Text = LocalizationResourceManager.Instance["NewRecipes"];
+            Collections.Text = LocalizationResourceManager.Instance["Collections"];
+            Current.Text = LocalizationResourceManager.Instance["Current"];
+
+
         }
 
-        
 
         private async void OnImageTapped(object sender, EventArgs e)
         {

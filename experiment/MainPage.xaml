@@ -2,7 +2,7 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="experiment.MainPage"
-            xmlns:local="clr-namespace:experiment"
+            xmlns:local="clr-namespace:experiment"           
             BarBackgroundColor="{AppThemeBinding Dark=Black, Light=#D499A0}"
             SelectedTabColor="{AppThemeBinding Dark=#A93240, Light=white}"
             UnselectedTabColor="{AppThemeBinding Dark=white, Light=black}"
@@ -11,28 +11,35 @@
             android:TabbedPage.IsSwipePagingEnabled="False"
             android:TabbedPage.IsSmoothScrollEnabled="False">
 
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <local:LocalizationResourceManager x:Key="LocalizationResourceManager" />
+        </ResourceDictionary>
+    </TabbedPage.Resources>
 
-    <NavigationPage Title="Главная" BarTextColor="{AppThemeBinding Dark=White, Light=Black}" IconImageSource="main.png">
+    <NavigationPage Title="{Binding HomeTitle, Source={StaticResource LocalizationResourceManager}}"
+                    BarTextColor="{AppThemeBinding Dark=White, Light=Black}"
+                    IconImageSource="main.png">
         <x:Arguments>
-            <local:Home x:Name="Home" Title="Главная" />
+            <local:Home x:Name="Home" Title="{Binding HomeTitle, Source={StaticResource LocalizationResourceManager}}" />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Избранное" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="favourite.png">
+    <NavigationPage Title="{Binding Favorites, Source={StaticResource LocalizationResourceManager}}" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="favourite.png">
         <x:Arguments>
-            <local:like x:Name="like" Title="Избранное" />
+            <local:like x:Name="like" Title="{Binding Favorites, Source={StaticResource LocalizationResourceManager}}" />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Праздники" BarTextColor="{AppThemeBinding Dark=White, Light=Black}" IconImageSource="holidays.png">
+    <NavigationPage Title="{Binding Holidays, Source={StaticResource LocalizationResourceManager}}" BarTextColor="{AppThemeBinding Dark=White, Light=Black}" IconImageSource="holidays.png">
         <x:Arguments>
-            <local:holidays x:Name="holidays" Title="Праздники"/>
+            <local:holidays x:Name="holidays" Title="{Binding Holidays, Source={StaticResource LocalizationResourceManager}}"/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="Настройки" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="settings.png">
+    <NavigationPage Title="{Binding Settings, Source={StaticResource LocalizationResourceManager}}" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="settings.png">
         <x:Arguments>
-            <local:settings x:Name="settings" Title="Настройки"/>
+            <local:settings x:Name="settings" Title="{Binding Settings, Source={StaticResource LocalizationResourceManager}}"/>
         </x:Arguments>
     </NavigationPage>
 

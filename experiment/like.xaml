@@ -7,8 +7,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Профиль" IconImageSource="{AppThemeBinding Dark=profile.png, Light=profile2.png}" Priority="0" Order="Default" Clicked="ProfileButton"/>
     </ContentPage.ToolbarItems>
-    
-    
+
+
 
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
@@ -18,11 +18,23 @@
                 <Frame BackgroundColor="Transparent" Padding="0">
                     <StackLayout>
                         <Frame Padding="0" CornerRadius="15">
-                            <Image Source="farsh.png" Scale="1.5" HeightRequest="150">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnKabachok"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+                            <Grid>
+                                <Image Source="farsh.png" HeightRequest="150" Aspect="AspectFill">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnKabachok"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
                         </Frame>
                         <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}" />
                     </StackLayout>
@@ -31,12 +43,25 @@
 
                 <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
                     <StackLayout>
-                        <Frame Padding="0" CornerRadius="15" >
-                            <Image Source="grudka.png" Scale="1.75" HeightRequest="150">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnGrudka"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+                        <Frame Padding="0" CornerRadius="15">
+                            <Grid>
+                                <Image Source="grudka.png" Aspect="AspectFill" HeightRequest="150">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnGrudka"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
                         </Frame>
                         <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
                     </StackLayout>
@@ -45,11 +70,24 @@
                 <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
                     <StackLayout>
                         <Frame Padding="0" CornerRadius="15">
-                            <Image Source="chicken.png" Scale="1.75" HeightRequest="150">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnChicken"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+                            <Grid>
+                                <Image Source="chicken.png" Aspect="AspectFill" HeightRequest="150">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnChicken"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
                         </Frame>
 
                         <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
@@ -59,11 +97,24 @@
                 <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,100">
                     <StackLayout>
                         <Frame Padding="0" CornerRadius="15">
-                            <Image Source="salat.png" Scale="1.75" HeightRequest="150">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnSalat"/>
-                                </Image.GestureRecognizers>
-                            </Image>
+                            <Grid>
+                                <Image Source="salat.png" Aspect="AspectFill" HeightRequest="150">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnSalat"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+
+                                <Image Source="dark_like.png" 
+                                       HorizontalOptions="End"
+                                       VerticalOptions="End"
+                                       Margin="10"
+                                       WidthRequest="25"
+                                       HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnClick"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
                         </Frame>
 
                         <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>

@@ -19,7 +19,7 @@
                             <Label Text="Фаршированные кабачки" TextColor="{AppThemeBinding Dark=white, Light=black}" 
                                     FontSize="24" FontFamily="inglobalbold" HorizontalOptions="StartAndExpand"/>
                             <Image x:Name="likeImage" Source="{AppThemeBinding Dark=dark_not_like.png, Light=light_not_like.png}" 
-                                    WidthRequest="18" HorizontalOptions="EndAndExpand">
+                                    WidthRequest="22" HorizontalOptions="EndAndExpand">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnClick"/>
                                 </Image.GestureRecognizers>

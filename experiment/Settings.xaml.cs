@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,7 +30,33 @@ namespace experiment
                     RadioButtonDark.IsChecked = true;
                     break;
             }
+            UpdateText();
+
+            MessagingCenter.Subscribe<LocalizationResourceManager>(this, "CultureChanged", (sender) =>
+            {
+                UpdateText();
+            });
         }
+
+        private void UpdateText()
+        {
+            /*homeTitleLabel.Text = LocalizationResourceManager.Instance["HomeTitle"];*/
+            
+            Theme.Text = LocalizationResourceManager.Instance["Theme"];
+            Light.Text = LocalizationResourceManager.Instance["Light"];
+            Dark.Text = LocalizationResourceManager.Instance["Dark"];
+            System.Text = LocalizationResourceManager.Instance["System"];
+            Interfacelanguage.Text = LocalizationResourceManager.Instance["Interfacelanguage"];
+
+
+        }
+
+
+
+
+
+
+
         bool loaded;
         protected override void OnAppearing()
         {
@@ -78,7 +105,30 @@ namespace experiment
 
             DisplayAlert("Alert", "Edit button clicked!", "OK");
         }
+        private void OnLanguageChanged(object sender, EventArgs e)
+        {
+            var picker = sender as Picker;
+            var selectedLanguage = picker.SelectedItem.ToString();
 
+            CultureInfo culture;
+            if (selectedLanguage == "Русский")
+            {
+                culture = new CultureInfo("ru");
+            }
+            else if (selectedLanguage == "Deutsch")
+            {
+                culture = new CultureInfo("de");
+            }
+            else
+            {
+                culture = new CultureInfo("en");
+            }
+
+            LocalizationResourceManager.Instance.SetCulture(culture);
+
+            // Сохранить выбранный язык
+            Preferences.Set("AppLanguage", selectedLanguage);
+        }
     }
     
 }

@@ -16,6 +16,24 @@ namespace experiment
 		{
 			InitializeComponent ();
             Application.Current.RequestedThemeChanged += OnThemeChanged;
+            UpdateTitles();
+
+            MessagingCenter.Subscribe<LocalizationResourceManager>(this, "CultureChanged", (sender) =>
+            {
+                UpdateTitles();
+            });
+
+        }
+        private void UpdateTitles()
+        {
+            ((NavigationPage)this.Children[0]).Title = LocalizationResourceManager.Instance["HomeTitle"];
+            ((NavigationPage)this.Children[0]).CurrentPage.Title = LocalizationResourceManager.Instance["HomeTitle"];
+            ((NavigationPage)this.Children[1]).Title = LocalizationResourceManager.Instance["Favorites"];
+            ((NavigationPage)this.Children[1]).CurrentPage.Title = LocalizationResourceManager.Instance["Favorites"];
+            ((NavigationPage)this.Children[2]).Title = LocalizationResourceManager.Instance["Holidays"];
+            ((NavigationPage)this.Children[2]).CurrentPage.Title = LocalizationResourceManager.Instance["Holidays"];
+            ((NavigationPage)this.Children[3]).Title = LocalizationResourceManager.Instance["Settings"];
+            ((NavigationPage)this.Children[3]).CurrentPage.Title = LocalizationResourceManager.Instance["Settings"];
 
         }
         protected override void OnDisappearing()
