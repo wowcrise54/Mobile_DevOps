@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="experiment.MoreHoli1"
-             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
+             BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}"
+             Title="Пасха">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Профиль" IconImageSource="{AppThemeBinding Dark=profile.png, Light=profile2.png}" Priority="0" Order="Default" Clicked="ProfileButton"/>
@@ -13,7 +14,7 @@
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
 
-            <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
+            <StackLayout Padding="15,0,15,0" Margin="0,30,0,0">
 
                 <Frame BackgroundColor="Transparent" Padding="0">
                     <StackLayout>

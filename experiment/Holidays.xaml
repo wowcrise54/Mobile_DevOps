@@ -13,7 +13,7 @@
         <ScrollView VerticalScrollBarVisibility="Never">
             <StackLayout>
 
-                <Label Text="Пасха" FontSize="20" FontFamily="inglobal" Style="{DynamicResource GlobalLabelStyle}" Margin="10,40,0,10"/>
+                <Label Text="Пасха" FontSize="20" FontFamily="inglobal" Style="{DynamicResource GlobalLabelStyle}" Margin="10,30,0,10"/>
                 <ScrollView  Orientation="Horizontal" HorizontalScrollBarVisibility="Never" >
                     <StackLayout Orientation="Horizontal" Padding="15,0,10,0">
                         <Frame BackgroundColor="Transparent" Padding="0">

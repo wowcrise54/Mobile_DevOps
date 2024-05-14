@@ -13,7 +13,7 @@
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
 
-            <StackLayout Padding="15,0,15,0" Margin="0,50,0,0">
+            <StackLayout Padding="15,0,15,0" Margin="0,30,0,0">
 
                 <Frame BackgroundColor="Transparent" Padding="0">
                     <StackLayout>
