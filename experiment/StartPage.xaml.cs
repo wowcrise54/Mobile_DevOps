@@ -28,9 +28,9 @@ namespace experiment
             await Navigation.PushAsync(new RegisterPage());
         }
 
-        private async void OnMainPage(object sender, EventArgs e)
+        private void OnMainPage(object sender, EventArgs e)
         {
-            await Navigation.PopToRootAsync();
+            Application.Current.MainPage = new NavigationPage(new MainPage());
         }
     }
 }

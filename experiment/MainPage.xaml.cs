@@ -36,6 +36,7 @@ namespace experiment
             ((NavigationPage)this.Children[3]).CurrentPage.Title = LocalizationResourceManager.Instance["Settings"];
 
         }
+
         protected override void OnDisappearing()
         {
             Application.Current.RequestedThemeChanged -= OnThemeChanged;
