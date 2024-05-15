@@ -26,19 +26,25 @@
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="{Binding Favorites, Source={StaticResource LocalizationResourceManager}}" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="favourite.png">
+    <NavigationPage Title="{Binding Favorites, Source={StaticResource LocalizationResourceManager}}" 
+                    BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  
+                    IconImageSource="favourite.png">
         <x:Arguments>
             <local:like x:Name="like" Title="{Binding Favorites, Source={StaticResource LocalizationResourceManager}}" />
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="{Binding Holidays, Source={StaticResource LocalizationResourceManager}}" BarTextColor="{AppThemeBinding Dark=White, Light=Black}" IconImageSource="holidays.png">
+    <NavigationPage Title="{Binding Holidays, Source={StaticResource LocalizationResourceManager}}" 
+                    BarTextColor="{AppThemeBinding Dark=White, Light=Black}" 
+                    IconImageSource="holidays.png">
         <x:Arguments>
             <local:holidays x:Name="holidays" Title="{Binding Holidays, Source={StaticResource LocalizationResourceManager}}"/>
         </x:Arguments>
     </NavigationPage>
 
-    <NavigationPage Title="{Binding Settings, Source={StaticResource LocalizationResourceManager}}" BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  IconImageSource="settings.png">
+    <NavigationPage Title="{Binding Settings, Source={StaticResource LocalizationResourceManager}}" 
+                    BarTextColor="{AppThemeBinding Dark=White, Light=Black}"  
+                    IconImageSource="settings.png">
         <x:Arguments>
             <local:settings x:Name="settings" Title="{Binding Settings, Source={StaticResource LocalizationResourceManager}}"/>
         </x:Arguments>
