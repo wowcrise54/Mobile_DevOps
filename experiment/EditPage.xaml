@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="experiment.EditPage"
+             Title="Изменение профиля">
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Margin="0,30,0,0">
+            <Frame CornerRadius="50" WidthRequest="100" HeightRequest="100" Padding="0" HorizontalOptions="CenterAndExpand">
+                <Image Source="avatar.png" Aspect="AspectFill"/>
+            </Frame>
+            <Label Text="Выбрать фотографию" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+        </StackLayout>
+
+        <StackLayout Margin="20,40,20,0">
+            <Label Text="Имя пользователя" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+            <Entry Text="Алексей" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                   PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+        </StackLayout>
+
+        <StackLayout Margin="20,20,20,0">
+            <Label Text="Почта" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+            <Entry Text="alexey2003@yandex.ru" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                   PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+        </StackLayout>
+
+        <StackLayout Margin="20,20,20,0">
+            <Label Text="Пароль" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
+            <Entry Text="xamarin_forms" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+                   PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal" IsPassword="True"/>
+        </StackLayout>
+
+        <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="70,14" Margin="0,40,0,0">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer/>
+            </Frame.GestureRecognizers>
+            <Label Text="Сохранить" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>
+        </Frame>
+    </StackLayout>
+</ContentPage>

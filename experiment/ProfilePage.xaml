@@ -6,7 +6,8 @@
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Изменить" IconImageSource="{AppThemeBinding Dark=edit.png, Light=edit2.png}"  Order="Primary" Priority="1"/>
+        <ToolbarItem Text="Изменить" IconImageSource="{AppThemeBinding Dark=edit.png, Light=edit2.png}"  Order="Primary" Priority="1"
+                     Clicked="EditPage"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout>
@@ -26,13 +27,13 @@
                 <StackLayout Orientation="Horizontal" Margin="25,40,25,0" Padding="0,10,0,10">
                     <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
 
-                        <Label Text="Номер телефона" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                        <Label Text="Почта" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
 
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
                         <StackLayout>
-                            <Label Text="+7 999 888 77 66" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                            <Label Text="alexey2003@yandex.ru" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
@@ -55,22 +56,6 @@
                     </Frame>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnMyRecipes"/>
-                    </StackLayout.GestureRecognizers>
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Label Text="Мои рецепты" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Image Source="{AppThemeBinding Dark=all.png, Light=all2.png}" WidthRequest="10"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
 
                 <StackLayout Orientation="Horizontal" Margin="25,10,25,0" Padding="0,10,0,10">
                     <StackLayout.GestureRecognizers>
