@@ -10,6 +10,8 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using experiment.Helpers;
 using Android.Widget;
+using Android.Content;
+using AndroidX.AppCompat.App;
 
 
 
@@ -26,7 +28,24 @@ namespace experiment.Droid
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            var appPreferences = DependencyService.Get<IAppPreferences>();
+            var theme = appPreferences.GetPreference("AppTheme", 0);
+
+            switch (theme)
+            {
+                case 1:
+                    AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
+                    break;
+                case 2:
+                    AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightYes;
+                    break;
+                default:
+                    AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightFollowSystem;
+                    break;
+            }
+
             LoadApplication(new App());
 
         }

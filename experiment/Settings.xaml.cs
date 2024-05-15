@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace experiment
@@ -51,12 +52,6 @@ namespace experiment
 
         }
 
-
-
-
-
-
-
         bool loaded;
         protected override void OnAppearing()
         {
@@ -75,21 +70,27 @@ namespace experiment
             if (string.IsNullOrWhiteSpace(val))
                 return;
 
+            var appPreferences = DependencyService.Get<IAppPreferences>();
+
             switch (val)
             {
                 case "System":
                     Sett1.Theme = 0;
+                    appPreferences.SavePreference("AppTheme", 0);
                     break;
                 case "Light":
                     Sett1.Theme = 1;
+                    appPreferences.SavePreference("AppTheme", 1);
                     break;
                 case "Dark":
                     Sett1.Theme = 2;
+                    appPreferences.SavePreference("AppTheme", 2);
                     break;
             }
 
             TheTheme.SetTheme();
         }
+
 
         private async void ProfileButton(object sender, EventArgs e)
         {

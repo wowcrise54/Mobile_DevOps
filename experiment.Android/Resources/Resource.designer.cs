@@ -14,7 +14,7 @@ namespace experiment.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.1.0.5")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.2.2.120")]
 	public partial class Resource
 	{
 		
@@ -16841,34 +16841,37 @@ namespace experiment.Droid
 			public const int StartPageLogo = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int system = 2131165385;
+			public const int StartPageLogo2 = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int system2 = 2131165386;
+			public const int system = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int tartaletki = 2131165387;
+			public const int system2 = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int test_custom_background = 2131165388;
+			public const int tartaletki = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int tooltip_frame_dark = 2131165389;
+			public const int test_custom_background = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int tooltip_frame_light = 2131165390;
+			public const int tooltip_frame_dark = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int tort = 2131165391;
+			public const int tooltip_frame_light = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int watch = 2131165392;
+			public const int tort = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int whiteline = 2131165393;
+			public const int watch = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int zozh = 2131165394;
+			public const int whiteline = 2131165394;
+			
+			// aapt resource value: 0x7F0700D3
+			public const int zozh = 2131165395;
 			
 			static Drawable()
 			{
