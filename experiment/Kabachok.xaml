@@ -65,7 +65,7 @@
 
 
 
-                <CollectionView ItemsSource="{Binding Ingredients}" Margin="20,0">
+                <CollectionView ItemsSource="{Binding Ingredients}" Margin="20,0,20,0" HeightRequest="260">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout>
@@ -77,8 +77,10 @@
                                         <Label Text="{Binding Amount}" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
                                     </Frame>
                                 </StackLayout>
+                                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="0,0,20,10">
+                                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
+                                </StackLayout>
                                 <!-- Добавляем разделительную линию -->
-                                <BoxView HeightRequest="1" BackgroundColor="{AppThemeBinding Dark=white, Light=black}" Margin="0,8"/>
                             </StackLayout>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -88,7 +90,7 @@
 
 
 
-                <CollectionView ItemsSource="{Binding Steps}" Margin="20,0">
+                <CollectionView ItemsSource="{Binding Steps}" Margin="20,0" HeightRequest="480">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout Margin="0,10">
