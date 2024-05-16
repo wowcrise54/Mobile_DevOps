@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
              x:Class="experiment.like"
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
@@ -8,121 +9,43 @@
         <ToolbarItem Text="Профиль" IconImageSource="{AppThemeBinding Dark=profile.png, Light=profile2.png}" Priority="0" Order="Default" Clicked="ProfileButton"/>
     </ContentPage.ToolbarItems>
 
-
-
     <StackLayout>
         <ScrollView VerticalScrollBarVisibility="Never">
-
             <StackLayout Padding="15,0,15,0" Margin="0,30,0,0">
-
-                <Frame BackgroundColor="Transparent" Padding="0">
-                    <StackLayout>
-                        <Frame Padding="0" CornerRadius="15">
-                            <Grid>
-                                <Image Source="farsh.png" HeightRequest="150" Aspect="AspectFill">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnKabachok"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                                <Image Source="dark_like.png" 
-                                       HorizontalOptions="End"
-                                       VerticalOptions="End"
-                                       Margin="10"
-                                       WidthRequest="25"
-                                       HeightRequest="25">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnClick"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </Grid>
-                        </Frame>
-                        <Label Text="Фаршированные кабачки" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}" />
-                    </StackLayout>
-                </Frame>
-
-
-                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
-                    <StackLayout>
-                        <Frame Padding="0" CornerRadius="15">
-                            <Grid>
-                                <Image Source="grudka.png" Aspect="AspectFill" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnGrudka"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-
-                                <Image Source="dark_like.png" 
-                                       HorizontalOptions="End"
-                                       VerticalOptions="End"
-                                       Margin="10"
-                                       WidthRequest="25"
-                                       HeightRequest="25">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnClick"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </Grid>
-                        </Frame>
-                        <Label Text="Грудка на овощах" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-                    </StackLayout>
-                </Frame>
-
-                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,0">
-                    <StackLayout>
-                        <Frame Padding="0" CornerRadius="15">
-                            <Grid>
-                                <Image Source="chicken.png" Aspect="AspectFill" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnChicken"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-
-                                <Image Source="dark_like.png" 
-                                       HorizontalOptions="End"
-                                       VerticalOptions="End"
-                                       Margin="10"
-                                       WidthRequest="25"
-                                       HeightRequest="25">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnClick"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </Grid>
-                        </Frame>
-
-                        <Label Text="Запеченная курочка с овощами" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-                    </StackLayout>
-                </Frame>
-
-                <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,100">
-                    <StackLayout>
-                        <Frame Padding="0" CornerRadius="15">
-                            <Grid>
-                                <Image Source="salat.png" Aspect="AspectFill" HeightRequest="150">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnSalat"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-
-                                <Image Source="dark_like.png" 
-                                       HorizontalOptions="End"
-                                       VerticalOptions="End"
-                                       Margin="10"
-                                       WidthRequest="25"
-                                       HeightRequest="25">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="OnClick"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </Grid>
-                        </Frame>
-
-                        <Label Text="Салатик 'Высокая кухня'" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-                    </StackLayout>
-                </Frame>
+                <CollectionView ItemsSource="{Binding LikeItems}">
+                    <!---CollectionView для отображения коллекции данных, привязано к свойству LikeItems -->
+                    <CollectionView.ItemTemplate>
+                        <!---определяет шаблон отображения каждого элемента-->
+                        <DataTemplate>
+                            <Frame BackgroundColor="Transparent" Padding="0" Margin="0,20,0,10">
+                                <!--Это есть, менять не надо-->
+                                <StackLayout>
+                                    <Frame Padding="0" CornerRadius="15">
+                                        <Grid>
+                                            <Image Source="{Binding ImageSource}" HeightRequest="150" Aspect="AspectFill">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding TapCommand}"/>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                            <Image Source="dark_like.png" 
+                                                   HorizontalOptions="End"
+                                                   VerticalOptions="End"
+                                                   Margin="10"
+                                                   WidthRequest="25"
+                                                   HeightRequest="25">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="OnClick"/>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        </Grid>
+                                    </Frame>
+                                    <Label Text="{Binding Title}" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}" />
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </StackLayout>
-
         </ScrollView>
-
     </StackLayout>
 </ContentPage>

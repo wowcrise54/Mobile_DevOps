@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"           
              x:Class="experiment.Kabachok"
              BackgroundColor="{AppThemeBinding Dark={StaticResource WindowBackgroundColor}, Light=white}">
 
@@ -32,7 +32,7 @@
                     <Frame BackgroundColor="Transparent" BorderColor="#646464" CornerRadius="20" Padding="12,10,12,8">
                         <StackLayout HorizontalOptions="CenterAndExpand">
                             <Image Source="watch.png" WidthRequest="30" HeightRequest="30"/>
-                            <Label Text="30 мин" TextColor="{AppThemeBinding Dark=white, Light=black}"
+                            <Label Text="30 мин" x:Name="timeLabel" TextColor="{AppThemeBinding Dark=white, Light=black}"
                                    FontFamily="inglobal" FontSize="14"/>
                         </StackLayout>
                     </Frame>
@@ -63,145 +63,57 @@
                 <Label Text="Ингредиенты" FontSize="20" FontFamily="inglobalbold"
                        TextColor="{AppThemeBinding Dark=white, Light=black}" Margin="20,20,20,0"/>
 
-                <StackLayout Orientation="Horizontal" Margin="20,20,20,0" Padding="0,10,0,0">
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
 
-                        <Label Text="Первый" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
 
-                    </Frame>
+                <CollectionView ItemsSource="{Binding Ingredients}" Margin="20,0">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" Padding="0,10">
+                                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                        <Label Text="{Binding Name}" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+                                    </Frame>
+                                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
+                                        <Label Text="{Binding Amount}" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                                    </Frame>
+                                </StackLayout>
+                                <!-- Добавляем разделительную линию -->
+                                <BoxView HeightRequest="1" BackgroundColor="{AppThemeBinding Dark=white, Light=black}" Margin="0,8"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-                    
-                </StackLayout>
 
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
-                </StackLayout>
 
-                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
 
-                        <Label Text="Второй" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
 
-                    </Frame>
-
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-
-                        <Label Text="Третий" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
-
-                    </Frame>
-
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" Padding="0,10,0,0">
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <Label Text="Четвертый" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
-                    </Frame>
-
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="0">
-                        <StackLayout>
-                            <Label Text="100 гр" FontSize="16" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
-                    <Image Source="{AppThemeBinding Dark=whiteline.png, Light=darkline.png}" WidthRequest="320"/>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal" Margin="20,30,20,0">
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,8">
-                        <Label Text="1 шаг" FontSize="20" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
-                    </Frame>
-
-                    <Frame BackgroundColor="#A93240" CornerRadius="20" Padding="30,8">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnTime"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Label x:Name="timeLabel" Text="05:00 мин" FontSize="18" TextColor="White" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <Frame BackgroundColor="{AppThemeBinding Dark=#2D2D2D, Light=#CDCDCD}" CornerRadius="35" Margin="0,20,0,0">
-                    <StackLayout>
-                        <Label Text="Описание шага, которого пока нет, но оно обязательно появится. А пока его нет накидаю пару букав пи пи 
-                               ипип ипи ипи ипи ипип ипи ипи вщ щв щв щвщ щв щв щв щв щв щв щв щв  "
-                               FontSize="18" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                    </StackLayout>
-                </Frame>
-
-                <StackLayout Orientation="Horizontal" Margin="20,40,20,0">
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,8">
-                        <Label Text="2 шаг" FontSize="20" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
-                    </Frame>
-
-                    <Frame BackgroundColor="#A93240" CornerRadius="20" Padding="30,8">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnTime"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Label Text="10:00 мин" FontSize="18" TextColor="White" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <Frame BackgroundColor="{AppThemeBinding Dark=#2D2D2D, Light=#CDCDCD}" CornerRadius="35" Margin="0,20">
-                    <StackLayout>
-                        <Label Text="Описание шага, которого пока нет, но оно обязательно появится. А пока его нет накидаю пару букав пи пи 
-                               ипип ипи ипи ипи ипип ипи ипи вщ щв щв щвщ щв щв щв щв щв щв щв щв  "
-                               FontSize="18" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                    </StackLayout>
-                </Frame>
-
-                <StackLayout Orientation="Horizontal" Margin="20,20,20,0">
-                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,8">
-                        <Label Text="3 шаг" FontSize="20" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
-                    </Frame>
-
-                    <Frame BackgroundColor="#A93240" CornerRadius="20" Padding="30,8">
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnTime"/>
-                        </Frame.GestureRecognizers>
-                        <StackLayout VerticalOptions="CenterAndExpand">
-                            <Label Text="15:00 мин" FontSize="18" TextColor="White" FontFamily="inglobal"/>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <Frame BackgroundColor="{AppThemeBinding Dark=#2D2D2D, Light=#CDCDCD}" CornerRadius="35" Margin="0,20">
-                    <StackLayout>
-                        <Label Text="Описание шага, которого пока нет, но оно обязательно появится. А пока его нет накидаю пару букав пи пи 
-                               ипип ипи ипи ипи ипип ипи ипи вщ щв щв щвщ щв щв щв щв щв щв щв щв  "
-                               FontSize="18" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
-                    </StackLayout>
-                </Frame>
+                <CollectionView ItemsSource="{Binding Steps}" Margin="20,0">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Margin="0,10">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" Padding="0,8">
+                                        <Label Text="{Binding Number, StringFormat='{0} шаг'}" FontSize="20" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobalbold"/>
+                                    </Frame>
+                                    <Frame BackgroundColor="#A93240" CornerRadius="20" Padding="30,8">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnTime"/>
+                                        </Frame.GestureRecognizers>
+                                        <StackLayout VerticalOptions="CenterAndExpand">
+                                            <Label Text="{Binding Time}" FontSize="18" TextColor="White" FontFamily="inglobal"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <Frame BackgroundColor="{AppThemeBinding Dark=#2D2D2D, Light=#CDCDCD}" CornerRadius="35" Margin="0,20,0,0">
+                                    <StackLayout>
+                                        <Label Text="{Binding Description}" FontSize="18" TextColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
                 <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="35,16" Margin="0,30,0,40">
                     <Frame.GestureRecognizers>
@@ -211,7 +123,7 @@
                            HorizontalTextAlignment="Center" 
                            VerticalTextAlignment="Center" FontSize="20" FontFamily="inglobal" TextColor="White"/>
                 </Frame>
-                
+
             </StackLayout>
         </ScrollView>
     </StackLayout>
