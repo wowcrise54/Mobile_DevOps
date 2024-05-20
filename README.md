@@ -29,6 +29,8 @@
   <img src="https://github.com/wowcrise54/Mobile_DevOps/assets/166754436/88e1228a-1518-4668-879f-dbce5872afb3" alt="Frame 1" width="22%" style="max-width: 22.22%;">
 </div>
 
+https://cooks-experiments.gitbook.io/kulinarnye-eksperimenty/
+
 
 ## Технологии
 - [Xamarin.Android](https://learn.microsoft.com/ru-ru/previous-versions/xamarin/android/)
