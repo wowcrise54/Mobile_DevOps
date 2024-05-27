@@ -13,7 +13,7 @@ public class AuthService
     {
         _client = new HttpClient
         {
-            BaseAddress = new Uri("http://172.30.74.244:5000")
+            BaseAddress = new Uri("http://192.168.0.102:5000")
         };
     }
     public async Task<bool> Register(string name, string mail, string password)

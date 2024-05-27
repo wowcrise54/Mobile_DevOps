@@ -25,8 +25,6 @@ namespace experiment
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
-            // Получаем информацию о профиле пользователя при загрузке страницы
             await LoadUserProfile();
         }
         private async Task LoadUserProfile()
@@ -38,7 +36,7 @@ namespace experiment
                 return;
             }
             using (HttpClient client = new HttpClient {
-                BaseAddress = new Uri("http://172.30.74.244:5000")
+                BaseAddress = new Uri("http://192.168.0.102:5000")
             })
             {
                 try
