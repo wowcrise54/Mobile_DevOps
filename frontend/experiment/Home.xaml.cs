@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,27 +17,10 @@ namespace experiment
             InitializeComponent();
             UpdateText();
 
-
             MessagingCenter.Subscribe<LocalizationResourceManager>(this, "CultureChanged", (sender) =>
             {
                 UpdateText();
             });
-        }
-
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            using (HttpClient client = new HttpClient())
-            {
-                string url = "http://localhost:5000/api/hello";  // Убедитесь, что адрес правильный
-                HttpResponseMessage response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    string content = await response.Content.ReadAsStringAsync();
-                    DisplayAlert("API Response", content, "OK");
-                }
-            }
         }
         private void UpdateText()
         {
