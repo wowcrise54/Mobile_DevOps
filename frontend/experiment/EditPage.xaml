@@ -15,25 +15,25 @@
 
         <StackLayout Margin="20,40,20,0">
             <Label Text="Имя пользователя" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-            <Entry Text="Алексей" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+            <Entry x:Name="NameEntry"  Text="Имя" TextColor="{AppThemeBinding Dark=white, Light=black}" 
                    PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
         </StackLayout>
 
         <StackLayout Margin="20,20,20,0">
             <Label Text="Почта" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-            <Entry Text="alexey2003@yandex.ru" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+            <Entry x:Name="EmailEntry" Text="example@mail.ru" TextColor="{AppThemeBinding Dark=white, Light=black}" 
                    PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal"/>
         </StackLayout>
 
         <StackLayout Margin="20,20,20,0">
             <Label Text="Пароль" FontFamily="inglobal" FontSize="16" Style="{DynamicResource GlobalLabelStyle}"/>
-            <Entry Text="xamarin_forms" TextColor="{AppThemeBinding Dark=white, Light=black}" 
+            <Entry x:Name="PassEntry" Text="password" TextColor="{AppThemeBinding Dark=white, Light=black}" 
                    PlaceholderColor="{AppThemeBinding Dark=white, Light=black}" FontFamily="inglobal" IsPassword="True"/>
         </StackLayout>
 
         <Frame BackgroundColor="#A93240" CornerRadius="35" HorizontalOptions="Center" Padding="70,14" Margin="0,40,0,0">
             <Frame.GestureRecognizers>
-                <TapGestureRecognizer/>
+                <TapGestureRecognizer Tapped="OnEditButtonClicked"/>
             </Frame.GestureRecognizers>
             <Label Text="Сохранить" 
                    HorizontalTextAlignment="Center" 

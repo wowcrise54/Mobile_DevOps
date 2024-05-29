@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from config import Config
 from models import db
 from auth.routes import auth
@@ -14,6 +14,7 @@ jwt = JWTManager(app)
 
 app.register_blueprint(auth, url_prefix='/auth')
 app.register_blueprint(profile, url_prefix='/profile')
+
 
 if __name__ == '__main__':
     with app.app_context():

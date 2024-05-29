@@ -16,7 +16,12 @@ namespace experiment
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage
-    {   
+    {
+        public class Profile
+        {
+            public string Name { get; set; }
+            public string Mail { get; set; }
+        }
         public ProfilePage()
         {
             InitializeComponent();
@@ -55,11 +60,6 @@ namespace experiment
                     await DisplayAlert("Error", "Что-то пошло не так", "OK");
                 }
             }
-        }
-        public class Profile
-        {
-            public string Name { get; set; }
-            public string Mail { get; set; }
         }
 
 

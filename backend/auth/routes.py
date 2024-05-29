@@ -31,7 +31,7 @@ def login():
     password = data.get('password')
     profile = Profile.query.filter_by(mail=mail).first()
     if profile and profile.password == password:
-        access_token = create_access_token(identity={'mail': profile.mail})
+        access_token = create_access_token(identity={'id': profile.id})
         return jsonify(access_token=access_token), 200
 
     return jsonify({"msg": "Invalid email or password"}), 401
