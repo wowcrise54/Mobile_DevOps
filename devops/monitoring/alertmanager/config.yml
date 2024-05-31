@@ -1,0 +1,14 @@
+route:
+	receiver: default-telegram
+
+receivers:
+- name: 'default-telegram'
+  telegram_configs:
+  - api_url: https://api.telegram.org
+    chat_id: 1000000000
+    bot_token: 7000000000:aaaaaaaaaaa_a_aaaaaaaaa
+    disable_notifications: false
+    http_config:
+      follow_redirects: true
+    send_resolved: true
+    parse_mode: ""
