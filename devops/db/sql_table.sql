@@ -1,0 +1,130 @@
+CREATE DATABASE mobile_devops;
+\c mobile_devops
+
+CREATE TABLE IF NOT EXISTS "profile"(
+    "id" SERIAL PRIMARY KEY,
+    "name" VARCHAR(100) NOT NULL,
+    "mail" VARCHAR(100) UNIQUE NOT NULL,
+    "password" VARCHAR(255) NOT NULL,
+    "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS "rating_reference"(
+    "id" INTEGER NOT NULL,
+    "name" CHAR(255) NOT NULL
+);
+ALTER TABLE
+    "rating_reference" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "ingredients_reference"(
+    "id" INTEGER NOT NULL,
+    "id_ingredients" INTEGER NOT NULL,
+    "id_recipes" INTEGER NOT NULL,
+    "id_measure_unit" INTEGER NOT NULL
+);
+ALTER TABLE
+    "ingredients_reference" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "compilations"(
+    "id" INTEGER NOT NULL,
+    "name" CHAR(255) NOT NULL
+);
+ALTER TABLE
+    "compilations" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "measure_unit"(
+    "id" INTEGER NOT NULL,
+    "name" CHAR(255) NOT NULL
+);
+ALTER TABLE
+    "measure_unit" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "categories_recipes"(
+    "id" INTEGER NOT NULL,
+    "id_categories" INTEGER NOT NULL,
+    "id_recipes" INTEGER NOT NULL
+);
+ALTER TABLE
+    "categories_recipes" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "categories"(
+    "id" INTEGER NOT NULL,
+    "name" CHAR(255) NOT NULL
+);
+ALTER TABLE
+    "categories" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "step_recipes"(
+    "id" INTEGER NOT NULL,
+    "id_step" INTEGER NOT NULL,
+    "id_recipes" INTEGER NOT NULL
+);
+ALTER TABLE
+    "step_recipes" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "compilations_recipes"(
+    "id" INTEGER NOT NULL,
+    "id_compilations" INTEGER NOT NULL,
+    "id_recipes" INTEGER NOT NULL
+);
+ALTER TABLE
+    "compilations_recipes" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "recipes"(
+    "id" INTEGER NOT NULL,
+    "name" CHAR(255) NOT NULL,
+    "complexity" INTEGER NOT NULL,
+    "time" TIME(0) WITHOUT TIME ZONE NOT NULL,
+    "photo" bytea NOT NULL
+);
+ALTER TABLE
+    "recipes" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "rating"(
+    "id" INTEGER NOT NULL,
+    "id_profile" INTEGER NOT NULL,
+    "id_recipes" INTEGER NOT NULL,
+    "id_rating" INTEGER NOT NULL
+);
+ALTER TABLE
+    "rating" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "favourites"(
+    "id" INTEGER NOT NULL,
+    "id_profile" INTEGER NOT NULL,
+    "id_recipes" INTEGER NOT NULL
+);
+ALTER TABLE
+    "favourites" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "ingredients"(
+    "id" INTEGER NOT NULL,
+    "name" CHAR(255) NOT NULL,
+    "quantity" INTEGER NOT NULL
+);
+ALTER TABLE
+    "ingredients" ADD PRIMARY KEY("id");
+CREATE TABLE IF NOT EXISTS "step"(
+    "id" INTEGER NOT NULL,
+    "number" INTEGER NOT NULL,
+    "time" TIME(0) WITHOUT TIME ZONE NOT NULL,
+    "description" CHAR(255) NOT NULL
+);
+ALTER TABLE
+    "step" ADD PRIMARY KEY("id");
+ALTER TABLE
+    "compilations_recipes" ADD CONSTRAINT "compilations_recipes_id_recipes_foreign" FOREIGN KEY("id_recipes") REFERENCES "recipes"("id");
+ALTER TABLE
+    "ingredients_reference" ADD CONSTRAINT "ingredients_reference_id_measure_unit_foreign" FOREIGN KEY("id_measure_unit") REFERENCES "measure_unit"("id");
+ALTER TABLE
+    "ingredients_reference" ADD CONSTRAINT "ingredients_reference_id_ingredients_foreign" FOREIGN KEY("id_ingredients") REFERENCES "ingredients"("id");
+ALTER TABLE
+    "rating" ADD CONSTRAINT "rating_id_profile_foreign" FOREIGN KEY("id_profile") REFERENCES "profile"("id");
+ALTER TABLE
+    "favourites" ADD CONSTRAINT "favourites_id_recipes_foreign" FOREIGN KEY("id_recipes") REFERENCES "recipes"("id");
+ALTER TABLE
+    "categories_recipes" ADD CONSTRAINT "categories_recipes_id_recipes_foreign" FOREIGN KEY("id_recipes") REFERENCES "recipes"("id");
+ALTER TABLE
+    "step_recipes" ADD CONSTRAINT "step_recipes_id_recipes_foreign" FOREIGN KEY("id_recipes") REFERENCES "recipes"("id");
+ALTER TABLE
+    "compilations_recipes" ADD CONSTRAINT "compilations_recipes_id_compilations_foreign" FOREIGN KEY("id_compilations") REFERENCES "compilations"("id");
+ALTER TABLE
+    "rating" ADD CONSTRAINT "rating_id_rating_foreign" FOREIGN KEY("id_rating") REFERENCES "rating_reference"("id");
+ALTER TABLE
+    "rating" ADD CONSTRAINT "rating_id_recipes_foreign" FOREIGN KEY("id_recipes") REFERENCES "recipes"("id");
+ALTER TABLE
+    "categories_recipes" ADD CONSTRAINT "categories_recipes_id_categories_foreign" FOREIGN KEY("id_categories") REFERENCES "categories"("id");
+ALTER TABLE
+    "step_recipes" ADD CONSTRAINT "step_recipes_id_step_foreign" FOREIGN KEY("id_step") REFERENCES "step"("id");
+ALTER TABLE
+    "favourites" ADD CONSTRAINT "favourites_id_profile_foreign" FOREIGN KEY("id_profile") REFERENCES "profile"("id");
+ALTER TABLE
+    "ingredients_reference" ADD CONSTRAINT "ingredients_reference_id_recipes_foreign" FOREIGN KEY("id_recipes") REFERENCES "recipes"("id");

@@ -1,0 +1,2 @@
+[docker_hosts]
+docker ansible_host=localhost ansible_user=morozov ansible_password=Tusson112
